@@ -1,11 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="bb5a476b-48da-4270-9cac-ef290ae44cd9" name="Default" comment="" />
+    <list default="true" id="bb5a476b-48da-4270-9cac-ef290ae44cd9" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/ten_square_base/src/main/resources/mapper/xml/TbLabelMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ten_square_base/src/main/java/cn/withmes/base/BaseApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/ten_square_base/src/main/java/cn/withmes/base/BaseApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ten_square_base/src/main/java/cn/withmes/base/controller/TbLabelController.java" beforeDir="false" afterPath="$PROJECT_DIR$/ten_square_base/src/main/java/cn/withmes/base/controller/TbLabelController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ten_square_base/src/main/java/cn/withmes/base/entity/TbLabel.java" beforeDir="false" afterPath="$PROJECT_DIR$/ten_square_base/src/main/java/cn/withmes/base/entity/TbLabel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ten_square_base/src/main/java/cn/withmes/base/mapper/TbLabelMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/ten_square_base/src/main/java/cn/withmes/base/mapper/TbLabelMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ten_square_base/src/main/java/cn/withmes/base/mapper/xml/TbLabelMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ten_square_base/src/main/java/cn/withmes/base/service/TbLabelService.java" beforeDir="false" afterPath="$PROJECT_DIR$/ten_square_base/src/main/java/cn/withmes/base/service/TbLabelService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ten_square_base/src/main/java/cn/withmes/base/service/impl/TbLabelServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/ten_square_base/src/main/java/cn/withmes/base/service/impl/TbLabelServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ten_square_base/src/main/resources/application-mysql.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/ten_square_base/src/main/resources/application-mysql.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ten_square_common/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ten_square_common/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ten_square_common/src/main/java/cn/withmes/base/web/error/ErrorPageConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/ten_square_common/src/main/java/cn/withmes/base/web/error/ErrorPageConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ten_square_common/src/main/java/cn/withmes/base/web/error/MyExceptionHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/ten_square_common/src/main/java/cn/withmes/base/web/error/BaseExceptionHandler.java" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
     <ignored path="$PROJECT_DIR$/ten_square_base/target/" />
     <ignored path="$PROJECT_DIR$/ten_square_common/target/" />
+    <ignored path="$PROJECT_DIR$/../sql_convert_pojo/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -14,35 +28,157 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/pom.xml">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="TbLabelController.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/ten_square_base/src/main/java/cn/withmes/base/controller/TbLabelController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="12" column="40" selection-start-line="12" selection-start-column="40" selection-end-line="12" selection-end-column="40" />
+            <state relative-caret-position="444">
+              <caret line="170" column="32" selection-start-line="170" selection-start-column="32" selection-end-line="170" selection-end-column="32" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
-          <provider editor-type-id="MavenHelperPluginDependencyAnalyzer" />
         </entry>
       </file>
-      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ten_square_base/pom.xml">
-          <provider selected="true" editor-type-id="text-editor" />
-          <provider editor-type-id="MavenHelperPluginDependencyAnalyzer" />
+      <file leaf-file-name="ErrorPageConfig.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ten_square_common/src/main/java/cn/withmes/base/web/error/ErrorPageConfig.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="323">
+              <caret line="28" column="17" selection-start-line="28" selection-start-column="17" selection-end-line="28" selection-end-column="17" />
+            </state>
+          </provider>
         </entry>
       </file>
-      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ten_square_common/pom.xml">
-          <provider selected="true" editor-type-id="text-editor" />
-          <provider editor-type-id="MavenHelperPluginDependencyAnalyzer" />
+      <file leaf-file-name="BaseExceptionHandler.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ten_square_common/src/main/java/cn/withmes/base/web/error/BaseExceptionHandler.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="510">
+              <caret line="30" column="75" selection-start-line="30" selection-start-column="75" selection-end-line="30" selection-end-column="75" />
+              <folding>
+                <element signature="n#!!doc" expanded="true" />
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ExceptionHandler.java" pinned="false" current-in-tab="false">
+        <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/5.0.5.RELEASE/spring-web-5.0.5.RELEASE-sources.jar!/org/springframework/web/bind/annotation/ExceptionHandler.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="298">
+              <caret line="105" column="18" selection-start-line="105" selection-start-column="18" selection-end-line="105" selection-end-column="18" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BaseServiceImpl.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ten_square_common/src/main/java/cn/withmes/base/service/BaseServiceImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="281">
+              <caret line="98" selection-start-line="98" selection-end-line="98" />
+              <folding>
+                <element signature="e#2569#2570#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TbLabel.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ten_square_base/src/main/java/cn/withmes/base/entity/TbLabel.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="176">
+              <caret line="22" column="13" selection-start-line="22" selection-start-column="13" selection-end-line="22" selection-end-column="13" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TableName.class" pinned="false" current-in-tab="false">
+        <entry file="jar://$MAVEN_REPOSITORY$/com/baomidou/mybatis-plus-support/2.1.9/mybatis-plus-support-2.1.9.jar!/com/baomidou/mybatisplus/annotations/TableName.class">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="170">
+              <caret line="17" column="16" selection-start-line="17" selection-start-column="11" selection-end-line="17" selection-end-column="16" />
+            </state>
+          </provider>
         </entry>
       </file>
     </leaf>
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+        <option value="Interface" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>BaseRestfulController</find>
+      <find>mapUnderscoreToCamelCase</find>
+      <find>StrategyConfig</find>
+      <find>outputDir</find>
+      <find>fileOverride</find>
+      <find>commons-lang3</find>
+      <find>entityTableFieldAnnotationEnable</find>
+      <find>initialize</find>
+      <find>com.mysql.cj</find>
+      <find>tensquare_base</find>
+      <find>com.mysql.jdbc.Driver</find>
+      <find>sql_convert_pojo</find>
+      <find>8080</find>
+      <find>ExceptionHandler</find>
+    </findStrings>
+    <replaceStrings>
+      <replace />
+    </replaceStrings>
+    <dirStrings>
+      <dir>E:\my-project\sql_convert_pojo</dir>
+      <dir>E:\my-project\ten_square</dir>
+    </dirStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
+        <option value="$PROJECT_DIR$/ten_square_base/pom.xml" />
+        <option value="$PROJECT_DIR$/ten_square_base/src/main/resources/application.yaml" />
+        <option value="$PROJECT_DIR$/ten_square_common/src/main/java/cn/withmes/base/utils/http/FileItem.java" />
+        <option value="$PROJECT_DIR$/ten_square_common/src/main/java/cn/withmes/base/exception/BusinessException.java" />
+        <option value="$PROJECT_DIR$/ten_square_common/src/main/java/cn/withmes/base/web/BaseRestfulController.java" />
+        <option value="$PROJECT_DIR$/ten_square_common/src/main/java/cn/withmes/base/mode/ResponseData.java" />
+        <option value="$PROJECT_DIR$/ten_square_common/src/main/java/cn/withmes/base/utils/common/CopyAttributesUtils.java" />
+        <option value="$PROJECT_DIR$/ten_square_common/src/main/java/cn/withmes/base/utils/common/RegexUtil.java" />
+        <option value="$PROJECT_DIR$/ten_square_common/src/main/java/cn/withmes/base/service/BaseServiceImpl.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/sql_convert_pojo/pom.xml" />
+        <option value="$PROJECT_DIR$/../sql_convert_pojo/pom.xml" />
+        <option value="$PROJECT_DIR$/../sql_convert_pojo/src/main/resources/application.yaml" />
+        <option value="$PROJECT_DIR$/../sql_convert_pojo/src/main/resources/templates/controller.java.vm" />
+        <option value="$PROJECT_DIR$/../sql_convert_pojo/src/test/java/cn/withmes/sql_convert_pojo/CodeGenerator.java" />
+        <option value="$PROJECT_DIR$/../sql_convert_pojo/src/main/resources/templates/entity.java.vm" />
+        <option value="$PROJECT_DIR$/ten_square_common/pom.xml" />
+        <option value="$PROJECT_DIR$/ten_square_base/src/main/java/cn/withmes/base/service/TbLabelService.java" />
+        <option value="$PROJECT_DIR$/ten_square_base/src/main/java/cn/withmes/base/mapper/xml/TbLabelMapper.xml" />
+        <option value="$PROJECT_DIR$/ten_square_base/src/main/java/cn/withmes/base/service/impl/TbLabelServiceImpl.java" />
+        <option value="$PROJECT_DIR$/ten_square_base/src/main/java/cn/withmes/base/valid/UpdateValid.java" />
+        <option value="$PROJECT_DIR$/ten_square_base/src/main/java/cn/withmes/base/entity/vo/TbLabelVo.java" />
+        <option value="$PROJECT_DIR$/ten_square_base/src/main/java/cn/withmes/base/mapper/TbLabelMapper.java" />
+        <option value="$PROJECT_DIR$/ten_square_base/src/main/resources/mapper/xml/TbLabelMapper.xml" />
+        <option value="$PROJECT_DIR$/ten_square_base/src/main/java/cn/withmes/base/BaseApplication.java" />
+        <option value="$PROJECT_DIR$/ten_square_base/src/main/resources/application-mysql.yaml" />
+        <option value="$PROJECT_DIR$/ten_square_common/src/main/java/cn/withmes/base/web/error/ErrorPageConfig.java" />
+        <option value="$PROJECT_DIR$/ten_square_base/src/main/java/cn/withmes/base/entity/vo/TbLabelListVo.java" />
+        <option value="$PROJECT_DIR$/ten_square_base/src/main/java/cn/withmes/base/entity/TbLabel.java" />
+        <option value="$PROJECT_DIR$/ten_square_common/src/main/java/cn/withmes/base/web/error/MyExceptionHandler.java" />
+        <option value="$PROJECT_DIR$/ten_square_common/src/main/java/cn/withmes/base/web/error/ExceptionHandler.java" />
+        <option value="$PROJECT_DIR$/ten_square_common/src/main/java/cn/withmes/base/web/error/BaseExceptionHandler.java" />
+        <option value="$PROJECT_DIR$/ten_square_base/src/main/java/cn/withmes/base/controller/TbLabelController.java" />
       </list>
     </option>
   </component>
@@ -52,6 +188,31 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
+  <component name="MavenProjectNavigator">
+    <treeState>
+      <expand>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="sql_convert_pojo" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+        </path>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="sql_convert_pojo" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+          <item name="Dependencies" type="f4be9f2a:MavenProjectsStructure$DependenciesNode" />
+        </path>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="tensquare_parent" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+        </path>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="tensquare_parent" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+          <item name="Dependencies" type="f4be9f2a:MavenProjectsStructure$DependenciesNode" />
+        </path>
+      </expand>
+      <select />
+    </treeState>
+  </component>
   <component name="MavenRunner">
     <option name="jreName" value="1.8 (1)" />
     <option name="vmOptions" value="-Dfile.encoding=GB2312" />
@@ -60,25 +221,33 @@
     <packageJsonPaths />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="673" />
-    <option name="y" value="36" />
+    <option name="x" value="-22" />
+    <option name="y" value="4" />
     <option name="width" value="1932" />
     <option name="height" value="1100" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="1" id="Add" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
       <pane id="AndroidView" />
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
               <item name="ten_square_parent" type="b2602c69:ProjectViewProjectNode" />
               <item name="ten_square" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ten_square_parent" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ten_square" type="462c0819:PsiDirectoryNode" />
+              <item name="ten_square_base" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -87,15 +256,32 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="GO_FMT" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="go.gopath.indexing.explicitly.defined" value="true" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="project.structure.last.edited" value="Libraries" />
+    <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15176849" />
-    <property name="project.structure.side.proportion" value="0.0" />
-    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\my-project\ten_square\ten_square_base\src\main\resources\mapper" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="cn.withmes.base.entity.vo" />
+      <recent name="cn.withmes.base.valid" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\my-project\ten_square\ten_square_base\src\main\java\cn\withmes\base\controller" />
+      <recent name="E:\my-project\ten_square\ten_square_base\src\main\java\cn\withmes\base" />
+      <recent name="E:\my-project\sql_convert_pojo\src\main\resources" />
+      <recent name="E:\my-project\ten_square\ten_square_common\src\main\java\cn\withmes" />
+      <recent name="E:\my-project\ten_square\ten_square_base\src\main\resources" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -109,7 +295,29 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.BaseApplication">
+    <configuration name="BaseApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="cn.withmes.base.BaseApplication" />
+      <module name="ten_square_base" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="cn.withmes.base.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+    </configuration>
+    <configuration name="CodeGenerator" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="cn.withmes.sql_convert_pojo.CodeGenerator" />
+      <module name="sql_convert_pojo" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="cn.withmes.sql_convert_pojo.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+    </configuration>
     <configuration default="true" type="Application" factoryName="Application">
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
     </configuration>
@@ -128,6 +336,10 @@
         <value defaultName="singleModule" />
       </option>
       <patterns />
+    </configuration>
+    <configuration name="SqlConvertPojoApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="sql_convert_pojo" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="cn.withmes.sql_convert_pojo.SqlConvertPojoApplication" />
     </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
@@ -151,6 +363,17 @@
       <properties />
       <listeners />
     </configuration>
+    <list>
+      <item itemvalue="Spring Boot.SqlConvertPojoApplication" />
+      <item itemvalue="Application.BaseApplication" />
+      <item itemvalue="Application.CodeGenerator" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.BaseApplication" />
+        <item itemvalue="Application.CodeGenerator" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -162,51 +385,62 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1542262796681</updated>
-      <workItem from="1542262798069" duration="71000" />
+      <workItem from="1542262798069" duration="7078000" />
+      <workItem from="1542270324306" duration="3820000" />
+      <workItem from="1542275030968" duration="1127000" />
+      <workItem from="1542291699659" duration="4112000" />
     </task>
+    <task id="LOCAL-00001" summary="project init">
+      <created>1542265163107</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1542265163107</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="71000" />
+    <option name="totallyTimeSpent" value="16137000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="673" y="36" width="1932" height="1100" extended-state="0" />
-    <editor active="true" />
+    <frame x="-22" y="4" width="1932" height="1100" extended-state="0" />
     <layout>
-      <window_info anchor="right" id="Palette" />
-      <window_info anchor="bottom" id="Event Log" side_tool="true" />
-      <window_info anchor="bottom" id="JRebel Console" side_tool="true" />
-      <window_info anchor="right" id="Maven Projects" />
-      <window_info anchor="bottom" id="JRebel Executor" />
-      <window_info anchor="bottom" id="Database Changes" show_stripe_button="false" />
-      <window_info id="Capture Tool" />
-      <window_info id="Designer" />
-      <window_info anchor="right" id="Database" />
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
+      <window_info anchor="bottom" id="JRebel Console" order="7" side_tool="true" />
+      <window_info anchor="right" id="Maven Projects" order="3" weight="0.32995737" />
+      <window_info anchor="bottom" id="JRebel Executor" order="7" />
+      <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
+      <window_info id="Capture Tool" order="2" />
+      <window_info id="Designer" order="2" />
+      <window_info anchor="right" id="Database" order="3" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info id="UI Designer" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info id="UI Designer" order="2" />
+      <window_info anchor="bottom" id="Debug" order="3" visible="true" weight="0.39875388" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="right" id="Palette&#9;" />
-      <window_info id="Image Layers" />
-      <window_info anchor="bottom" id="Java Enterprise" />
-      <window_info anchor="right" id="Capture Analysis" />
-      <window_info anchor="bottom" id="Run" order="2" />
-      <window_info anchor="bottom" id="Version Control" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Spring" />
-      <window_info anchor="bottom" id="Terminal" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25053418" />
-      <window_info anchor="right" id="Bean Validation" />
-      <window_info id="JRebel" side_tool="true" />
-      <window_info id="Web" side_tool="true" />
-      <window_info anchor="right" id="Theme Preview" />
-      <window_info id="Favorites" side_tool="true" />
+      <window_info anchor="bottom" id="Messages" order="7" weight="0.3297062" />
+      <window_info anchor="right" id="Palette&#9;" order="3" />
+      <window_info id="Image Layers" order="2" />
+      <window_info anchor="bottom" id="Java Enterprise" order="7" />
+      <window_info anchor="right" id="Capture Analysis" order="3" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.34494016" />
+      <window_info anchor="bottom" id="Version Control" order="7" />
+      <window_info anchor="bottom" id="Spring" order="7" />
+      <window_info anchor="bottom" id="Terminal" order="7" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.258547" />
+      <window_info anchor="right" id="Bean Validation" order="3" />
+      <window_info id="Web" order="2" side_tool="true" />
+      <window_info id="JRebel" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Theme Preview" order="3" />
+      <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -215,26 +449,409 @@
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="project init" />
+    <option name="LAST_COMMIT_MESSAGE" value="project init" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <option name="time" value="1" />
+    </breakpoint-manager>
+  </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/ten_square_base/pom.xml">
-      <provider selected="true" editor-type-id="text-editor" />
-      <provider editor-type-id="MavenHelperPluginDependencyAnalyzer" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ten_square_common/pom.xml">
-      <provider selected="true" editor-type-id="text-editor" />
-      <provider editor-type-id="MavenHelperPluginDependencyAnalyzer" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
+    <entry file="file://$PROJECT_DIR$/ten_square_base/src/main/java/cn/withmes/base/controller/TbLabelController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="12" column="40" selection-start-line="12" selection-start-column="40" selection-end-line="12" selection-end-column="40" />
+        <state relative-caret-position="2312">
+          <caret line="158" column="9" selection-start-line="158" selection-start-column="9" selection-end-line="163" selection-end-column="33" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
-      <provider editor-type-id="MavenHelperPluginDependencyAnalyzer" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ten_square_base/src/main/java/cn/withmes/base/mapper/TbLabelMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ten_square_base/src/main/resources/mapper/xml/TbLabelMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ten_square_base/src/main/java/cn/withmes/base/service/impl/TbLabelServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" selection-start-line="2" selection-end-line="8" selection-end-column="62" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ten_square_base/src/main/java/cn/withmes/base/service/TbLabelService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="10" column="6" lean-forward="true" selection-start-line="10" selection-start-column="6" selection-end-line="10" selection-end-column="6" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ten_square_base/src/main/java/cn/withmes/base/entity/TbLabel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="13" selection-start-line="6" selection-start-column="7" selection-end-line="6" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ten_square_common/src/main/java/cn/withmes/base/dal/CatMybatisPlugins.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="25" column="13" selection-start-line="25" selection-start-column="13" selection-end-line="25" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ten_square_common/src/main/java/cn/withmes/base/enums/BaseEnum.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="17" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ten_square_common/src/main/java/cn/withmes/base/enums/BaseEnumSerializer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="159">
+          <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ten_square_common/src/main/java/cn/withmes/base/enums/Enabled.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="12" selection-start-line="9" selection-start-column="12" selection-end-line="9" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ten_square_common/src/main/java/cn/withmes/base/enums/ResultCode.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="231">
+          <caret line="166" column="18" selection-start-line="166" selection-start-column="18" selection-end-line="166" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ten_square_common/src/main/java/cn/withmes/base/exception/BusinessException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="19" column="22" selection-start-line="19" selection-start-column="22" selection-end-line="19" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ten_square_common/src/main/java/cn/withmes/base/exception/ControllerException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ten_square_common/src/main/java/cn/withmes/base/exception/FatalSequenceException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ten_square_common/src/main/java/cn/withmes/base/exception/MapperException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ten_square_common/src/main/java/cn/withmes/base/utils/common/CopyAttributesUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="155">
+          <caret line="70" column="68" selection-start-line="70" selection-start-column="68" selection-end-line="70" selection-end-column="68" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ten_square_common/src/main/java/cn/withmes/base/utils/common/RegexUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="21" column="22" lean-forward="true" selection-start-line="21" selection-start-column="22" selection-end-line="21" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ten_square_common/src/main/java/cn/withmes/base/dal/BaseMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="17" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sql_convert_pojo/pom.xml" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/baomidou/ant/tensquare_base/controller/TbCityController.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/baomidou/ant/tensquare_base/entity/TbLabelEntity.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/baomidou/ant/tensquare_base/service/TbCityService.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/baomidou/ant/tensquare_base/service/impl/TbCityServiceImpl.java" />
+    <entry file="file://$PROJECT_DIR$/../sql_convert_pojo/src/test/java/cn/withmes/sql_convert_pojo/SqlConvertPojoApplicationTests.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../sql_convert_pojo/src/main/resources/application.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="17" column="16" selection-start-line="17" selection-start-column="16" selection-end-line="17" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../sql_convert_pojo/src/main/resources/application.yaml222">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="178">
+          <caret line="17" column="23" lean-forward="true" selection-start-line="17" selection-start-column="23" selection-end-line="17" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../sql_convert_pojo/src/main/resources/templates/controller.java.vm">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="77" column="13" lean-forward="true" selection-end-line="171" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/codeGen/com/withmes/controller/TbLabelController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1386">
+          <caret line="45" column="55" selection-start-line="45" selection-start-column="55" selection-end-line="45" selection-end-column="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../sql_convert_pojo/src/main/resources/templates/entity.java.vm">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="518">
+          <caret line="143" column="33" selection-start-line="143" selection-start-column="33" selection-end-line="143" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-context/5.0.5.RELEASE/spring-context-5.0.5.RELEASE-sources.jar!/org/springframework/validation/annotation/Validated.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="528">
+          <caret line="53" column="18" selection-start-line="53" selection-start-column="18" selection-end-line="53" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ten_square_base/src/main/java/cn/withmes/base/valid/AddValid.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="13" column="25" selection-start-line="13" selection-start-column="25" selection-end-line="13" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ten_square_base/src/main/java/cn/withmes/base/mapper/TbLabelMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ten_square_base/src/main/java/cn/withmes/base/service/impl/TbLabelServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="19" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ten_square_base/src/main/java/cn/withmes/base/service/TbLabelService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="18" column="1" lean-forward="true" selection-start-line="18" selection-start-column="1" selection-end-line="18" selection-end-column="1" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../sql_convert_pojo/src/test/java/cn/withmes/sql_convert_pojo/CodeGenerator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="492">
+          <caret line="100" column="27" selection-start-line="100" selection-start-column="27" selection-end-line="100" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ten_square_base/src/main/resources/application-mysql.yaml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="40" selection-start-line="10" selection-start-column="40" selection-end-line="10" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ten_square_base/src/main/java/cn/withmes/base/BaseApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="19" column="13" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ten_square_common/src/main/java/cn/withmes/base/mode/ResponseData.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="561">
+          <caret line="42" column="53" selection-start-line="42" selection-start-column="53" selection-end-line="42" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ten_square_common/src/main/java/cn/withmes/base/enums/ResultEnum.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="17" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ten_square_base/src/main/resources/mapper/xml/TbLabelMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="19" column="51" selection-start-line="19" selection-start-column="51" selection-end-line="19" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ten_square_base/src/main/java/cn/withmes/base/entity/vo/TbLabelListVo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="18" selection-start-line="18" selection-end-line="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ten_square_common/src/main/java/cn/withmes/base/web/BaseRestfulController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="612">
+          <caret line="58" column="34" selection-start-line="58" selection-start-column="34" selection-end-line="58" selection-end-column="34" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1570#1571#0" expanded="true" />
+            <element signature="e#1630#1631#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_171/src.zip!/java/util/UUID.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="304">
+          <caret line="69" column="19" selection-start-line="69" selection-start-column="19" selection-end-line="69" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ten_square_common/src/main/java/cn/withmes/base/utils/UuidUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="22" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/com/baomidou/mybatis-plus-support/2.1.9/mybatis-plus-support-2.1.9.jar!/com/baomidou/mybatisplus/annotations/TableName.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="17" column="16" selection-start-line="17" selection-start-column="11" selection-end-line="17" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ten_square_common/src/main/java/cn/withmes/base/service/BaseServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="281">
+          <caret line="98" selection-start-line="98" selection-end-line="98" />
+          <folding>
+            <element signature="e#2569#2570#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ten_square_base/src/main/java/cn/withmes/base/entity/TbLabel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="22" column="13" selection-start-line="22" selection-start-column="13" selection-end-line="22" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ten_square_common/src/main/java/cn/withmes/base/web/error/ErrorPageConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="28" column="17" selection-start-line="28" selection-start-column="17" selection-end-line="28" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/5.0.5.RELEASE/spring-web-5.0.5.RELEASE-sources.jar!/org/springframework/web/bind/annotation/ExceptionHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="298">
+          <caret line="105" column="18" selection-start-line="105" selection-start-column="18" selection-end-line="105" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ten_square_common/src/main/java/cn/withmes/base/web/error/BaseExceptionHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="510">
+          <caret line="30" column="75" selection-start-line="30" selection-start-column="75" selection-end-line="30" selection-end-column="75" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ten_square_base/src/main/java/cn/withmes/base/controller/TbLabelController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="444">
+          <caret line="170" column="32" selection-start-line="170" selection-start-column="32" selection-end-line="170" selection-end-column="32" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
     </entry>
   </component>
   <component name="masterDetails">
     <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <last-edited>Spring</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
       <state key="GlobalLibrariesConfigurable.UI">
         <settings>
           <splitter-proportions>
@@ -248,11 +865,24 @@
       </state>
       <state key="JdkListConfigurable.UI">
         <settings>
-          <last-edited>1.8</last-edited>
+          <last-edited>1.8 (1)</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
                 <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>ten_square_common</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+                <option value="0.6" />
               </list>
             </option>
           </splitter-proportions>
@@ -272,6 +902,7 @@
       </state>
       <state key="ProjectLibrariesConfigurable.UI">
         <settings>
+          <last-edited>Maven: aopalliance:aopalliance:1.0</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>

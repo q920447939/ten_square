@@ -1,13 +1,9 @@
-package cn.withmes.base.entity;
-
-import java.io.Serializable;
-
-import com.baomidou.mybatisplus.annotations.TableName;
-import com.baomidou.mybatisplus.annotations.Version;
+package cn.withmes.base.entity.vo;
 
 import lombok.Data;
-import lombok.EqualsAndHashCode;
 import lombok.experimental.Accessors;
+
+import java.io.Serializable;
 
 /**
  * <p>
@@ -19,8 +15,8 @@ import lombok.experimental.Accessors;
  */
 @Data
 @Accessors(chain = true)
-@TableName(value="tb_label")
-public class TbLabel implements Serializable {
+public class
+TbLabelListVo implements Serializable {
 
     private static final long serialVersionUID = 1L;
 

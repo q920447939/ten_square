@@ -5,6 +5,7 @@
  */
 package cn.withmes.base;
 
+import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
@@ -15,6 +16,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  * @date 2018年11月15日
  */
 @SpringBootApplication
+@MapperScan("cn.withmes.base.mapper*")
 public class BaseApplication {
     public static void main(String[] args) {
         SpringApplication.run(BaseApplication.class,args);

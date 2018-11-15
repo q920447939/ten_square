@@ -26,7 +26,7 @@ public class ErrorPageConfig {
                 ErrorPage errorPage404 = new ErrorPage(HttpStatus.NOT_FOUND, "/error.html");
                 ErrorPage errorPage500 = new ErrorPage(HttpStatus.INTERNAL_SERVER_ERROR, "/error-500.html");
                 factory.addErrorPages(errorPage400,errorPage404,errorPage500);
-                factory.setPort(8080);
+               // factory.setPort(8080);
             }
         };
     }
