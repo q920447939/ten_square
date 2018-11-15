@@ -11,5 +11,26 @@
 
     <artifactId>ten_square_base</artifactId>
 
+    <properties>
+        <cn.withmes.ten_square_common.version>1.0-SNAPSHOT</cn.withmes.ten_square_common.version>
+    </properties>
 
+
+    <dependencies>
+       <!-- <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-data-jpa</artifactId>
+        </dependency>-->
+        <!--<dependency>
+                <groupId>mysql</groupId>
+                <artifactId>mysql-connector-java</artifactId>
+        </dependency>-->
+        <dependency>
+            <groupId>cn.withmes</groupId>
+            <artifactId>ten_square_common</artifactId>
+            <version>${cn.withmes.ten_square_common.version}</version>
+        </dependency>
+
+
+    </dependencies>
 </project>
