@@ -4,8 +4,10 @@
   <component name="MavenProjectsManager">
     <option name="originalFiles">
       <list>
-        <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/../sql_convert_pojo/pom.xml" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/ten_square_base/pom.xml" />
+        <option value="$PROJECT_DIR$/ten_square_common/pom.xml" />
       </list>
     </option>
   </component>

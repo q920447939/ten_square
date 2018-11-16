@@ -8,3 +8,10 @@ spring:
   profiles:
     active: mysql
 
+
+# Logger Config
+logging:
+  level:
+    com.baomidou.mybatisplus.samples.deluxe: debug
+
+

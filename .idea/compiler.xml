@@ -11,5 +11,11 @@
         <module name="ten_square_common" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="ten_square" target="1.8" />
+      <module name="ten_square_common (1)" target="1.8" />
+      <module name="ten_square_common (2)" target="1.8" />
+      <module name="ten_square_parent (1)" target="1.8" />
+    </bytecodeTargetLevel>
   </component>
 </project>

@@ -21,5 +21,6 @@ spring:
   cache:
     cache-names: demo_cache
 
-mybatis-plus:
-  mapper-locations: classpath*:/mapper/**/*.xml
+  # 扫描 mapper.xml
+#mybatis-plus:
+  #mapper-locations: classpath:/mapper/*.xml
