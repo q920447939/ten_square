@@ -15,7 +15,7 @@ import java.io.Serializable;
  */
 @Data
 @Accessors(chain = true)
-public class TbLabelListVo implements Serializable {
+public class TbLabelListVo    implements Serializable {
 
     private static final long serialVersionUID = 1L;
 

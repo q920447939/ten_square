@@ -3,7 +3,6 @@ package cn.withmes.base.service;
 
 import cn.withmes.base.entity.TbLabel;
 import cn.withmes.common.service.BaseService;
-import com.baomidou.mybatisplus.plugins.Page;
 
 import java.util.List;
 

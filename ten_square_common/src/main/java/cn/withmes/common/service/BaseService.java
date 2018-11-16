@@ -1,6 +1,6 @@
 package cn.withmes.common.service;
 
-import com.baomidou.mybatisplus.mapper.Wrapper;
+import com.baomidou.mybatisplus.core.conditions.Wrapper ;
 
 import java.io.Serializable;
 import java.util.Collection;

@@ -22,5 +22,7 @@ spring:
     cache-names: demo_cache
 
   # 扫描 mapper.xml
-#mybatis-plus:
-  #mapper-locations: classpath:/mapper/*.xml
+mybatis-plus:
+  mapper-locations: classpath:/mapper/*.xml
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl

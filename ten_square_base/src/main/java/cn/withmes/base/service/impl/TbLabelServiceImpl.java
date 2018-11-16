@@ -21,9 +21,12 @@ public class TbLabelServiceImpl extends BaseServiceImpl<TbLabel> implements TbLa
 
     @Override
     public BaseMapper<TbLabel> getBaseMapper() {
-        return mapper;
+        return null;
     }
 
-
+    @Override
+    public int updateAllColumn(TbLabel entity) {
+        return 0;
+    }
 }
 

@@ -29,6 +29,8 @@
         <slf4j.version>1.7.12</slf4j.version>
         <aspectj.version>1.8.5</aspectj.version>
         <activemq.version>5.11.1</activemq.version>
+        <mybatisplus.version>3.0.5</mybatisplus.version>
+
     </properties>
 
     <dependencies>
@@ -53,13 +55,18 @@
         <!--  mysql-plus start-->
         <dependency>
             <groupId>com.baomidou</groupId>
-            <artifactId>mybatisplus-spring-boot-starter</artifactId>
-            <version>1.0.5</version>
+            <artifactId>mybatis-plus-boot-starter</artifactId>
+            <version>${mybatisplus.version}</version>
         </dependency>
         <dependency>
             <groupId>com.baomidou</groupId>
             <artifactId>mybatis-plus</artifactId>
-            <version>2.1.9</version>
+            <version>${mybatisplus.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.baomidou</groupId>
+            <artifactId>mybatis-plus-generator</artifactId>
+            <version>${mybatisplus.version}</version>
         </dependency>
         <!--  mysql-plus end-->
 

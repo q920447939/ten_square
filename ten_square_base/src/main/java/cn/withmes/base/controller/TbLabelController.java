@@ -11,12 +11,12 @@ import cn.withmes.common.utils.UuidUtils;
 import cn.withmes.common.utils.common.CopyAttributesUtils;
 import cn.withmes.base.valid.AddValid;
 import cn.withmes.base.valid.UpdateValid;
-import com.baomidou.mybatisplus.mapper.EntityWrapper;
-import com.baomidou.mybatisplus.mapper.Wrapper;
-import com.baomidou.mybatisplus.plugins.Page;
+import com.baomidou.mybatisplus.core.conditions.Wrapper;
+import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
+import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import org.springframework.stereotype.Controller;
 import cn.withmes.common.web.BaseRestfulController;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -169,7 +169,7 @@ public class TbLabelController extends BaseRestfulController {
     @GetMapping
     public ResponseData<List<TbLabel>> findLableAll() {
         System.out.println(1/0);
-        Wrapper<TbLabel> wrapper = new EntityWrapper<>();
+        Wrapper<TbLabel> wrapper = new QueryWrapper<>();
         List<TbLabel> list = tbLabelService.findByParams(wrapper);
         return successData(list);
     }

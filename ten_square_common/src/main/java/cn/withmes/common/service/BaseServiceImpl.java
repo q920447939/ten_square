@@ -3,7 +3,7 @@ package cn.withmes.common.service;
 import cn.withmes.common.dal.BaseMapper;
 import cn.withmes.common.exception.ValidateErrorException;
 import cn.withmes.common.utils.Reflections;
-import com.baomidou.mybatisplus.mapper.Wrapper;
+import com.baomidou.mybatisplus.core.conditions.Wrapper ;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -87,10 +87,10 @@ public abstract class BaseServiceImpl<T> {
 		return mapper.updateById(entity);
 	}
 	
-	public int updateAllColumn(T entity) {
+	/*public int updateAllColumn(T entity) {
 	    return mapper.updateAllColumnById(entity);
 	}
-
+*/
 	public int delete(Serializable id) {
 		return mapper.deleteById(id);
 	}

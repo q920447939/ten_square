@@ -2,9 +2,8 @@ package cn.withmes.base.entity;
 
 import java.io.Serializable;
 
-import com.baomidou.mybatisplus.annotations.TableField;
-import com.baomidou.mybatisplus.annotations.TableName;
-import com.baomidou.mybatisplus.annotations.Version;
+import com.baomidou.mybatisplus.annotation.TableField;
+import com.baomidou.mybatisplus.annotation.TableName;
 
 import lombok.Data;
 import lombok.EqualsAndHashCode;
@@ -21,7 +20,7 @@ import lombok.experimental.Accessors;
 @Data
 @Accessors(chain = true)
 @TableName(value="tb_label")
-public class TbLabel implements Serializable {
+public class TbLabel  implements Serializable {
 
     private static final long serialVersionUID = 1L;
 

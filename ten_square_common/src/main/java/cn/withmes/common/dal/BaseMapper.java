@@ -7,6 +7,6 @@ package cn.withmes.common.dal;
  * @auther: liming
  * @date: 2018/5/19 11:10
  */
-public interface BaseMapper<T> extends com.baomidou.mybatisplus.mapper.BaseMapper<T>{
+public interface BaseMapper<T> extends com.baomidou.mybatisplus.core.mapper.BaseMapper<T>{
 
 }
