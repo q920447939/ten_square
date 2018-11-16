@@ -1,0 +1,11 @@
+{
+  "hints": [],
+  "groups": [
+    {
+      "sourceType": "cn.withmes.base.config.RedisConfig",
+      "name": "spring.cache.redis",
+      "type": "cn.withmes.base.config.RedisConfig"
+    }
+  ],
+  "properties": []
+}

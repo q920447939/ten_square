@@ -5,6 +5,7 @@ import com.baomidou.mybatisplus.core.conditions.Wrapper ;
 import java.io.Serializable;
 import java.util.Collection;
 import java.util.List;
+import java.util.Map;
 
 /**
  * ClassName: IBaseService 
@@ -47,7 +48,7 @@ public interface BaseService<T> {
 	 * @author liming
 	 * @date 2018年5月11日
 	 */
-	int updateAllColumn(T entity);
+	//int updateAllColumn(T entity);
 
 	/**
 	 * DESC: 根据ID删除单个实体
@@ -84,7 +85,7 @@ public interface BaseService<T> {
 	 * @return
 	 * @throws Exception
 	 */
-//	List<T> findByParams(Map<String, Object> params);
+	//List<T> findByParams(Map<String, Object> params);
 
 	/**
 	 * DESC: 根据条件查找对象列表

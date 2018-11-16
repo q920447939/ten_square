@@ -16,4 +16,6 @@ import java.util.List;
  */
 public interface TbLabelService extends BaseService<TbLabel> {
 
+    String dosomeThing (String id);
+
 }

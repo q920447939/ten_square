@@ -88,9 +88,9 @@ public abstract class BaseServiceImpl<T> {
 	}
 	
 	/*public int updateAllColumn(T entity) {
-	    return mapper.updateAllColumnById(entity);
-	}
-*/
+	    return mapper.update(entity);
+	}*/
+
 	public int delete(Serializable id) {
 		return mapper.deleteById(id);
 	}
