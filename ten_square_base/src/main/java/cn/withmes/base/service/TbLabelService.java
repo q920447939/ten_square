@@ -2,7 +2,10 @@ package cn.withmes.base.service;
 
 
 import cn.withmes.base.entity.TbLabel;
+import cn.withmes.base.entity.vo.TbLabelListVo;
 import cn.withmes.common.service.BaseService;
+import com.baomidou.mybatisplus.core.metadata.IPage;
+import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 
 import java.util.List;
 
@@ -16,6 +19,6 @@ import java.util.List;
  */
 public interface TbLabelService extends BaseService<TbLabel> {
 
-    String dosomeThing (String id);
+    IPage<TbLabel> page (Page<TbLabel> page, TbLabelListVo vo);
 
 }

@@ -12,7 +12,9 @@ import cn.withmes.common.utils.common.CopyAttributesUtils;
 import cn.withmes.base.valid.AddValid;
 import cn.withmes.base.valid.UpdateValid;
 import com.baomidou.mybatisplus.core.conditions.Wrapper;
+import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
@@ -65,27 +67,23 @@ public class TbLabelController extends BaseRestfulController {
      * @since : Create in 2018-11-15
      */
     @RequestMapping(value = "/page" , method = RequestMethod.POST)
-    public ResponseData<Page<TbLabelListVo>> getTbLabelList(TbLabel param, @RequestParam(value = "draw" , defaultValue = "0" ) Integer draw,
+    @Cacheable(value = "ten_square.cn.withmes.base.controller.TbLabelController", key = "#id")
+    public ResponseData<IPage<TbLabel>> getTbLabelList(@RequestBody TbLabelListVo param,
+                                                            @RequestParam(value = "draw" , defaultValue = "0" ) Integer draw,
                                                             @RequestParam(value = "length" ) Integer length,
                                                             @RequestParam(value = "start" ) Integer start) {
         log.info("getTbLabelList.draw:{}.length:{}.start:{}" , draw, length, start);
-/*  DatatablesJSON<TbLabel> resJson=new DatatablesJSON<>();
-        try {
-        Integer pageNo=getPageNo(start,length);
-        Page<TbLabel> page=new Page<TbLabel>(pageNo,length);
-    tbLabelService.selectPage(page,new EntityWrapper<TbLabel>(param));
-        resJson.setDraw(draw++);
-        resJson.setRecordsTotal(page.getTotal());
-        resJson.setRecordsFiltered(page.getTotal());
-        resJson.setData(page.getRecords());
-        resJson.setSuccess(true);
-        }catch (Exception e){
-        resJson.setSuccess(false);
-        resJson.setError("异常信息:{"+e.getClass().getName()+"}");
-        logger.info("异常信息:{}"+e.getMessage());
+
+        //todo
+        if (start >50){
+
         }
-        return resJson;*/
-        return null;
+        if (length <0){
+
+        }
+        Page<TbLabel> page = new Page<>(start, length);
+        IPage<TbLabel> pageList = tbLabelService.page(page, param);
+        return successData(pageList);
     }
 
     /**
