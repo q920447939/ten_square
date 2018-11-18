@@ -1,7 +1,7 @@
 spring:
   datasource:
     type: com.alibaba.druid.pool.DruidDataSource
-    url: jdbc:mysql://182.254.234.193:3308/ten_square_recruit?useUnicode=true&characterEncoding=utf8&useSSL=false
+    url: jdbc:mysql://182.254.234.193:3308/tensquare_recruit?useUnicode=true&characterEncoding=utf8&useSSL=false
     username: root
     password: 123456
     initialSize: 5

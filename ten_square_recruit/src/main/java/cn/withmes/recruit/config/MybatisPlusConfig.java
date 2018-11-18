@@ -8,7 +8,7 @@ import org.springframework.context.annotation.Configuration;
  * @since 2018-08-12
  */
 @Configuration
-@MapperScan("cn.withmes.base.mapper")
+@MapperScan("cn.withmes.recruit.mapper")
 public class MybatisPlusConfig {
 
 }
