@@ -11,6 +11,7 @@
     <modules>
         <module>ten_square_common</module>
         <module>ten_square_base</module>
+        <module>ten_square_recruit</module>
     </modules>
     <name>tensquare_parent</name>
     <description>十次方项目</description>

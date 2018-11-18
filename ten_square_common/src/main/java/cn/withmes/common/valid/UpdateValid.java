@@ -3,7 +3,7 @@
  * @Author: liming
  * @Date: 2018年11月15日
  */
-package cn.withmes.base.valid;
+package cn.withmes.common.valid;
 
 /**
  * ClassName: AddValid

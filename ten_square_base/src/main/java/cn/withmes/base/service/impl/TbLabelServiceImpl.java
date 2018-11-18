@@ -1,11 +1,13 @@
 package cn.withmes.base.service.impl;
 
 import cn.withmes.base.entity.TbLabel;
+import cn.withmes.base.entity.bo.TbLabelBO;
 import cn.withmes.base.entity.vo.TbLabelListVo;
 import cn.withmes.base.mapper.TbLabelMapper;
 import cn.withmes.common.dal.BaseMapper;
 import cn.withmes.common.service.BaseServiceImpl;
 import cn.withmes.base.service.TbLabelService;
+import cn.withmes.common.utils.StringUtils;
 import cn.withmes.common.utils.common.CopyAttributesUtils;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.core.metadata.IPage;
@@ -34,10 +36,15 @@ public class TbLabelServiceImpl extends BaseServiceImpl<TbLabel> implements TbLa
     }
 
     @Override
-    public  IPage<TbLabel> page(Page<TbLabel> page, TbLabelListVo vo) {
+    public   IPage<TbLabel> page (Page<TbLabel> page, TbLabelListVo vo) {
         TbLabel dto = CopyAttributesUtils.copyAtoB(vo, TbLabel.class);
         QueryWrapper wrapper = new QueryWrapper();
-        wrapper.eq("state",dto.getState());
+        if (!StringUtils.isNotEmpty(dto.getState())) {
+            wrapper.eq("state",dto.getState());
+        }
+        if (!StringUtils.isNotEmpty(dto.getLabelname())) {
+            wrapper.eq("labelname",dto.getLabelname());
+        }
         IPage<TbLabel> userIPage = mapper.selectPage(page, wrapper);
         return userIPage;
     }

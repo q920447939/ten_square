@@ -4,13 +4,12 @@ package cn.withmes.base.controller;
 import cn.withmes.base.entity.TbLabel;
 import cn.withmes.base.entity.vo.TbLabelListVo;
 import cn.withmes.common.enums.ResultCode;
-import cn.withmes.base.mapper.TbLabelMapper;
 import cn.withmes.common.mode.ResponseData;
 import cn.withmes.base.service.TbLabelService;
 import cn.withmes.common.utils.UuidUtils;
 import cn.withmes.common.utils.common.CopyAttributesUtils;
-import cn.withmes.base.valid.AddValid;
-import cn.withmes.base.valid.UpdateValid;
+import cn.withmes.common.valid.AddValid;
+import cn.withmes.common.valid.UpdateValid;
 import com.baomidou.mybatisplus.core.conditions.Wrapper;
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
@@ -19,12 +18,10 @@ import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
-import org.springframework.stereotype.Controller;
 import cn.withmes.common.web.BaseRestfulController;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import java.util.List;
-import java.util.UUID;
 
 
 /**
@@ -81,12 +78,12 @@ public class TbLabelController extends BaseRestfulController {
         if (length <0){
 
         }
-        Page<TbLabel> page = new Page<>(start, length);
+        Page<TbLabel> page = new Page<>(draw, length);
         IPage<TbLabel> pageList = tbLabelService.page(page, param);
         return successData(pageList);
     }
 
-    /**
+     /**
      * @description : 通过id获取TbLabel
      * ---------------------------------
      * @author : leegoo

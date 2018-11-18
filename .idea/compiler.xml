@@ -9,6 +9,7 @@
         <module name="sql_convert_pojo" />
         <module name="ten_square_base" />
         <module name="ten_square_common" />
+        <module name="ten_square_recruit" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
