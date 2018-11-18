@@ -1,1 +1,1 @@
-hello
+condition 如果报错需要改成别的字段,因为这个是mysql的关键字
