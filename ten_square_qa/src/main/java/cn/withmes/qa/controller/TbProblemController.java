@@ -11,56 +11,60 @@ import com.baomidou.mybatisplus.core.metadata.IPage;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
-    import org.springframework.stereotype.Controller;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RestController;
+
+import java.util.List;
 
 /**
- *code is far away from bug with the animal protecting
- *  ┏┓　　　┏┓
- *┏┛┻━━━┛┻┓
- *┃　　　　　　　┃ 　
- *┃　　　━　　　┃
- *┃　┳┛　┗┳　┃
- *┃　　　　　　　┃
- *┃　　　┻　　　┃
- *┃　　　　　　　┃
- *┗━┓　　　┏━┛
- *　　┃　　　┃神兽保佑
- *　　┃　　　┃代码无BUG！
- *　　┃　　　┗━━━┓
- *　　┃　　　　　　　┣┓
- *　　┃　　　　　　　┏┛
- *　　┗┓┓┏━┳┓┏┛
- *　　　┃┫┫　┃┫┫
- *　　　┗┻┛　┗┻┛
+ * code is far away from bug with the animal protecting
+ * ┏┓　　　┏┓
+ * ┏┛┻━━━┛┻┓
+ * ┃　　　　　　　┃
+ * ┃　　　━　　　┃
+ * ┃　┳┛　┗┳　┃
+ * ┃　　　　　　　┃
+ * ┃　　　┻　　　┃
+ * ┃　　　　　　　┃
+ * ┗━┓　　　┏━┛
+ * 　　┃　　　┃神兽保佑
+ * 　　┃　　　┃代码无BUG！
+ * 　　┃　　　┗━━━┓
+ * 　　┃　　　　　　　┣┓
+ * 　　┃　　　　　　　┏┛
+ * 　　┗┓┓┏━┳┓┏┛
+ * 　　　┃┫┫　┃┫┫
+ * 　　　┗┻┛　┗┻┛
  *
- *   @description : TbProblem 控制器
- *   ---------------------------------
- *      @author leegoo
- *   @since 2018-11-18
+ * @author leegoo
+ * @description : TbProblem 控制器
+ * ---------------------------------
+ * @since 2018-11-18
  */
-@Controller
+@RestController
 @RequestMapping("/tbProblem")
 public class TbProblemController extends BaseRestfulController {
 
-@Autowired
-public TbProblemService tbProblemService;
+    @Autowired
+    public TbProblemService tbProblemService;
 
-/**
- * @description : 获取分页列表
- * ---------------------------------
- * @author : leegoo
- * @since : Create in 2018-11-18
- */
-@PostMapping(value = "/page")
-public ResponseData<IPage<TbProblem>> getTbProblemList(TbProblem param , @RequestParam(value = "draw",defaultValue = "0") Integer draw,
-                                                       @RequestParam(value = "length") Integer length,
-                                                       @RequestParam(value = "start") Integer start) {
-        log.info("getTbLabelList.draw:{}.length:{}.start:{}",draw,length,start);
+    /**
+     * @description : 获取分页列表
+     * ---------------------------------
+     * @author : leegoo
+     * @since : Create in 2018-11-18
+     */
+    @PostMapping(value = "/page")
+    public ResponseData<IPage<TbProblem>> getTbProblemList(TbProblem param, @RequestParam(value = "draw", defaultValue = "0") Integer draw,
+                                                           @RequestParam(value = "length") Integer length,
+                                                           @RequestParam(value = "start") Integer start) {
+        log.info("getTbLabelList.draw:{}.length:{}.start:{}", draw, length, start);
 /*  DatatablesJSON<TbProblem> resJson=new DatatablesJSON<>();
         try {
         Integer pageNo=getPageNo(start,length);
@@ -78,16 +82,31 @@ public ResponseData<IPage<TbProblem>> getTbProblemList(TbProblem param , @Reques
         }
         return resJson;*/
         return null;
-        }
+    }
 
-/**
- * @description : 通过id获取TbProblem
- * ---------------------------------
- * @author : leegoo
- * @since : Create in 2018-11-18
- */
-@GetMapping(value = "/getById")
-public ResponseData<TbProblem> getTbProblemById(String id) {
+
+    /**
+     * @description :根据lableid查询问题列表(最新回答)
+     * ---------------------------------
+     * @author : leegoo
+     * @since : Create in 2018-11-18
+     */
+    @GetMapping(value = "/newList/{lableid}")
+    public ResponseData<List<TbProblem>> queryNewListBylableId(@PathVariable(name = "lableid") String lableid) {
+        log.info("queryNewListBylableId.lableid:{}", lableid);
+        List<TbProblem> list = tbProblemService.newProblemsList(lableid);
+        return successData(list);
+    }
+
+
+    /**
+     * @description : 通过id获取TbProblem
+     * ---------------------------------
+     * @author : leegoo
+     * @since : Create in 2018-11-18
+     */
+    @GetMapping(value = "/getById")
+    public ResponseData<TbProblem> getTbProblemById(String id) {
 /* JSONResult<TbProblem> resJson = new JSONResult<>();
         try {
     TbProblem param= tbProblemService.selectById(id);
@@ -100,16 +119,16 @@ public ResponseData<TbProblem> getTbProblemById(String id) {
         }
         return resJson;*/
         return null;
-        }
+    }
 
-/**
- * @description : 通过id删除TbProblem
- * ---------------------------------
- * @author : leegoo
- * @since : Create in 2018-11-18
- */
-@GetMapping(value = "/deleteById")
-public ResponseData<Boolean> deleteTbProblemById(String id) {
+    /**
+     * @description : 通过id删除TbProblem
+     * ---------------------------------
+     * @author : leegoo
+     * @since : Create in 2018-11-18
+     */
+    @GetMapping(value = "/deleteById")
+    public ResponseData<Boolean> deleteTbProblemById(String id) {
         /*JSONResult<TbProblem> resJson = new JSONResult<>();
         try{
         resJson.setSuccess(tbProblemService.deleteById(id));
@@ -120,16 +139,16 @@ public ResponseData<Boolean> deleteTbProblemById(String id) {
         }
         return resJson;*/
         return null;
-        }
+    }
 
-/**
- * @description : 通过id更新TbProblem
- * ---------------------------------
- * @author : leegoo
- * @since : Create in 2018-11-18
- */
-@PostMapping(value = "/update")
-public ResponseData<Boolean> updateTbProblemById(@RequestBody @Validated(value = UpdateValid.class) TbProblem param) {
+    /**
+     * @description : 通过id更新TbProblem
+     * ---------------------------------
+     * @author : leegoo
+     * @since : Create in 2018-11-18
+     */
+    @PostMapping(value = "/update")
+    public ResponseData<Boolean> updateTbProblemById(@RequestBody @Validated(value = UpdateValid.class) TbProblem param) {
 /*  JSONResult<TbProblem> resJson = new JSONResult<>();
         try{
         resJson.setSuccess(tbProblemService.updateById(param));
@@ -140,16 +159,16 @@ public ResponseData<Boolean> updateTbProblemById(@RequestBody @Validated(value =
         }
         return resJson;*/
         return null;
-        }
+    }
 
-/**
- * @description : 添加TbProblem
- * ---------------------------------
- * @author : leegoo
- * @since : Create in 2018-11-18
- */
-@PostMapping(value = "/add")
-public ResponseData<Boolean> addTbProblem(@RequestBody @Validated(value = AddValid.class) TbProblem param) {
+    /**
+     * @description : 添加TbProblem
+     * ---------------------------------
+     * @author : leegoo
+     * @since : Create in 2018-11-18
+     */
+    @PostMapping(value = "/add")
+    public ResponseData<Boolean> addTbProblem(@RequestBody @Validated(value = AddValid.class) TbProblem param) {
 /*  JSONResult<TbProblem> resJson = new JSONResult<>();
         try{
         resJson.setSuccess(tbProblemService.insert(param));
@@ -160,5 +179,5 @@ public ResponseData<Boolean> addTbProblem(@RequestBody @Validated(value = AddVal
         }
         return resJson;*/
         return null;
-        }
-        }
+    }
+}

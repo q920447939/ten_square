@@ -23,4 +23,13 @@
  		id ,title ,content ,createtime ,updatetime ,userid ,nickname ,visits ,thumbup ,reply ,solve ,replyname ,replytime		
     </sql>
 
+    <select id="newProblems" parameterType="java.lang.String" resultMap="BaseResultMap">
+        select *
+        from tb_problem t1,tb_pl t2
+        where t1.id = t2.problemid
+        and t2.labelid = #{labelid}
+         and reply > 0
+        order by replytime desc
+    </select>
+
 </mapper>
