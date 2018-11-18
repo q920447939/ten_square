@@ -1,18 +1,13 @@
-package cn.withmes.recruit.controller;
+package cn.withmes.qa.controller;
 
 
 import cn.withmes.common.mode.ResponseData;
-import cn.withmes.common.utils.common.CopyAttributesUtils;
 import cn.withmes.common.valid.AddValid;
 import cn.withmes.common.valid.UpdateValid;
 import cn.withmes.common.web.BaseRestfulController;
-import cn.withmes.recruit.entity.TbEnterprise;
-import cn.withmes.recruit.entity.TbRecruit;
-import cn.withmes.recruit.entity.vo.TbEnterpriseListVo;
-import cn.withmes.recruit.entity.vo.TbEnterpriseVo;
-import cn.withmes.recruit.service.TbEnterpriseService;
+import cn.withmes.qa.entity.TbProblem;
+import cn.withmes.qa.service.TbProblemService;
 import com.baomidou.mybatisplus.core.metadata.IPage;
-import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -22,7 +17,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
     import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.RestController;
 
 /**
  *code is far away from bug with the animal protecting
@@ -44,17 +38,17 @@ import org.springframework.web.bind.annotation.RestController;
  *　　　┃┫┫　┃┫┫
  *　　　┗┻┛　┗┻┛
  *
- *   @description : TbEnterprise 控制器
+ *   @description : TbProblem 控制器
  *   ---------------------------------
  *      @author leegoo
  *   @since 2018-11-18
  */
-@RestController
-@RequestMapping("/tbEnterprise")
-public class TbEnterpriseController extends BaseRestfulController {
+@Controller
+@RequestMapping("/tbProblem")
+public class TbProblemController extends BaseRestfulController {
 
 @Autowired
-public TbEnterpriseService tbEnterpriseService;
+public TbProblemService tbProblemService;
 
 /**
  * @description : 获取分页列表
@@ -63,38 +57,62 @@ public TbEnterpriseService tbEnterpriseService;
  * @since : Create in 2018-11-18
  */
 @PostMapping(value = "/page")
-public ResponseData<IPage<TbEnterprise>> getTbEnterpriseList(@RequestBody TbEnterprise param , @RequestParam(value = "draw",defaultValue = "0") Integer draw,
-                                                                  @RequestParam(value = "length") Integer length,
-                                                                  @RequestParam(value = "start") Integer start) {
+public ResponseData<IPage<TbProblem>> getTbProblemList(TbProblem param , @RequestParam(value = "draw",defaultValue = "0") Integer draw,
+                                                       @RequestParam(value = "length") Integer length,
+                                                       @RequestParam(value = "start") Integer start) {
         log.info("getTbLabelList.draw:{}.length:{}.start:{}",draw,length,start);
-        Page<TbEnterprise> page = new Page<>(draw, length);
-        IPage<TbEnterprise> pageList = tbEnterpriseService.page(page, param);
-        return successData(pageList);
+/*  DatatablesJSON<TbProblem> resJson=new DatatablesJSON<>();
+        try {
+        Integer pageNo=getPageNo(start,length);
+        Page<TbProblem> page=new Page<TbProblem>(pageNo,length);
+    tbProblemService.selectPage(page,new EntityWrapper<TbProblem>(param));
+        resJson.setDraw(draw++);
+        resJson.setRecordsTotal(page.getTotal());
+        resJson.setRecordsFiltered(page.getTotal());
+        resJson.setData(page.getRecords());
+        resJson.setSuccess(true);
+        }catch (Exception e){
+        resJson.setSuccess(false);
+        resJson.setError("异常信息:{"+e.getClass().getName()+"}");
+        logger.info("异常信息:{}"+e.getMessage());
+        }
+        return resJson;*/
+        return null;
         }
 
 /**
- * @description : 通过id获取TbEnterprise
+ * @description : 通过id获取TbProblem
  * ---------------------------------
  * @author : leegoo
  * @since : Create in 2018-11-18
  */
 @GetMapping(value = "/getById")
-public ResponseData<TbEnterpriseVo> getTbEnterpriseById(String id) {
-        TbEnterprise dto = tbEnterpriseService.findById(id);
-        return successData(CopyAttributesUtils.copyAtoB(dto,TbEnterpriseVo.class));
+public ResponseData<TbProblem> getTbProblemById(String id) {
+/* JSONResult<TbProblem> resJson = new JSONResult<>();
+        try {
+    TbProblem param= tbProblemService.selectById(id);
+        resJson.setData(param);
+        resJson.setSuccess(true);
+        }catch (Exception e) {
+        resJson.setSuccess(false);
+        resJson.setMessage("异常信息:{"+e.getClass().getName()+"}");
+        logger.info("异常信息:{}"+e.getMessage());
+        }
+        return resJson;*/
+        return null;
         }
 
 /**
- * @description : 通过id删除TbEnterprise
+ * @description : 通过id删除TbProblem
  * ---------------------------------
  * @author : leegoo
  * @since : Create in 2018-11-18
  */
 @GetMapping(value = "/deleteById")
-public ResponseData<Boolean> deleteTbEnterpriseById(String id) {
-        /*JSONResult<TbEnterprise> resJson = new JSONResult<>();
+public ResponseData<Boolean> deleteTbProblemById(String id) {
+        /*JSONResult<TbProblem> resJson = new JSONResult<>();
         try{
-        resJson.setSuccess(tbEnterpriseService.deleteById(id));
+        resJson.setSuccess(tbProblemService.deleteById(id));
         }catch (Exception e) {
         resJson.setSuccess(false);
         resJson.setMessage("异常信息:{"+e.getClass().getName()+"}");
@@ -105,16 +123,16 @@ public ResponseData<Boolean> deleteTbEnterpriseById(String id) {
         }
 
 /**
- * @description : 通过id更新TbEnterprise
+ * @description : 通过id更新TbProblem
  * ---------------------------------
  * @author : leegoo
  * @since : Create in 2018-11-18
  */
 @PostMapping(value = "/update")
-public ResponseData<Boolean> updateTbEnterpriseById(@RequestBody @Validated(value = UpdateValid.class) TbEnterprise param) {
-/*  JSONResult<TbEnterprise> resJson = new JSONResult<>();
+public ResponseData<Boolean> updateTbProblemById(@RequestBody @Validated(value = UpdateValid.class) TbProblem param) {
+/*  JSONResult<TbProblem> resJson = new JSONResult<>();
         try{
-        resJson.setSuccess(tbEnterpriseService.updateById(param));
+        resJson.setSuccess(tbProblemService.updateById(param));
         }catch (Exception e) {
         resJson.setSuccess(false);
         resJson.setMessage("异常信息:{"+e.getClass().getName()+"}");
@@ -125,16 +143,16 @@ public ResponseData<Boolean> updateTbEnterpriseById(@RequestBody @Validated(valu
         }
 
 /**
- * @description : 添加TbEnterprise
+ * @description : 添加TbProblem
  * ---------------------------------
  * @author : leegoo
  * @since : Create in 2018-11-18
  */
 @PostMapping(value = "/add")
-public ResponseData<Boolean> addTbEnterprise(@RequestBody @Validated(value = AddValid.class) TbEnterprise param) {
-/*  JSONResult<TbEnterprise> resJson = new JSONResult<>();
+public ResponseData<Boolean> addTbProblem(@RequestBody @Validated(value = AddValid.class) TbProblem param) {
+/*  JSONResult<TbProblem> resJson = new JSONResult<>();
         try{
-        resJson.setSuccess(tbEnterpriseService.insert(param));
+        resJson.setSuccess(tbProblemService.insert(param));
         }catch (Exception e) {
         resJson.setSuccess(false);
         resJson.setMessage("异常信息:{"+e.getClass().getName()+"}");

@@ -1,8 +1,8 @@
 server:
-  port: 9002
+  port: 9003
 spring:
   application:
-    name: ten-square-recruit
+    name: ten-square-qa
   cache:
     type: redis
     ehcache:

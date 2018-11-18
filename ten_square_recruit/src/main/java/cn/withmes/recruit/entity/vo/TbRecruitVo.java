@@ -35,7 +35,7 @@ public class TbRecruitVo implements Serializable {
     /**
      * 经验要求
      */
-	private String condition;
+	private String conditions;
 	
     /**
      * 学历要求

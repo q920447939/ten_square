@@ -1,6 +1,7 @@
 package cn.withmes.recruit.controller;
 
 
+import cn.withmes.base.entity.TbLabel;
 import cn.withmes.common.mode.ResponseData;
 import cn.withmes.common.valid.AddValid;
 import cn.withmes.common.valid.UpdateValid;
@@ -9,6 +10,7 @@ import cn.withmes.recruit.entity.TbRecruit;
 import cn.withmes.recruit.entity.vo.TbRecruitListVo;
 import cn.withmes.recruit.entity.vo.TbRecruitVo;
 import cn.withmes.recruit.service.TbRecruitService;
+import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.validation.annotation.Validated;
@@ -18,78 +20,81 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
-    import org.springframework.stereotype.Controller;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RestController;
 
 /**
- *code is far away from bug with the animal protecting
- *  ┏┓　　　┏┓
- *┏┛┻━━━┛┻┓
- *┃　　　　　　　┃ 　
- *┃　　　━　　　┃
- *┃　┳┛　┗┳　┃
- *┃　　　　　　　┃
- *┃　　　┻　　　┃
- *┃　　　　　　　┃
- *┗━┓　　　┏━┛
- *　　┃　　　┃神兽保佑
- *　　┃　　　┃代码无BUG！
- *　　┃　　　┗━━━┓
- *　　┃　　　　　　　┣┓
- *　　┃　　　　　　　┏┛
- *　　┗┓┓┏━┳┓┏┛
- *　　　┃┫┫　┃┫┫
- *　　　┗┻┛　┗┻┛
+ * code is far away from bug with the animal protecting
+ * ┏┓　　　┏┓
+ * ┏┛┻━━━┛┻┓
+ * ┃　　　　　　　┃
+ * ┃　　　━　　　┃
+ * ┃　┳┛　┗┳　┃
+ * ┃　　　　　　　┃
+ * ┃　　　┻　　　┃
+ * ┃　　　　　　　┃
+ * ┗━┓　　　┏━┛
+ * 　　┃　　　┃神兽保佑
+ * 　　┃　　　┃代码无BUG！
+ * 　　┃　　　┗━━━┓
+ * 　　┃　　　　　　　┣┓
+ * 　　┃　　　　　　　┏┛
+ * 　　┗┓┓┏━┳┓┏┛
+ * 　　　┃┫┫　┃┫┫
+ * 　　　┗┻┛　┗┻┛
  *
- *   @description : TbRecruit 控制器
- *   ---------------------------------
- *      @author leegoo
- *   @since 2018-11-18
+ * @author leegoo
+ * @description : TbRecruit 控制器
+ * ---------------------------------
+ * @since 2018-11-18
  */
-@Controller
+@RestController
 @RequestMapping("/tbRecruit")
 public class TbRecruitController extends BaseRestfulController {
 
-@Autowired
-public TbRecruitService tbRecruitService;
+    @Autowired
+    public TbRecruitService tbRecruitService;
 
-/**
- * @description : 获取分页列表
- * ---------------------------------
- * @author : leegoo
- * @since : Create in 2018-11-18
- */
-@PostMapping(value = "/page")
-public ResponseData<Page<TbRecruitListVo>> getTbRecruitList(TbRecruit param , @RequestParam(value = "draw",defaultValue = "0") Integer draw,
-                                                            @RequestParam(value = "length") Integer length,
-                                                            @RequestParam(value = "start") Integer start) {
-        log.info("getTbLabelList.draw:{}.length:{}.start:{}",draw,length,start);
-/*  DatatablesJSON<TbRecruit> resJson=new DatatablesJSON<>();
-        try {
-        Integer pageNo=getPageNo(start,length);
-        Page<TbRecruit> page=new Page<TbRecruit>(pageNo,length);
-    tbRecruitService.selectPage(page,new EntityWrapper<TbRecruit>(param));
-        resJson.setDraw(draw++);
-        resJson.setRecordsTotal(page.getTotal());
-        resJson.setRecordsFiltered(page.getTotal());
-        resJson.setData(page.getRecords());
-        resJson.setSuccess(true);
-        }catch (Exception e){
-        resJson.setSuccess(false);
-        resJson.setError("异常信息:{"+e.getClass().getName()+"}");
-        logger.info("异常信息:{}"+e.getMessage());
-        }
-        return resJson;*/
-        return null;
-        }
+    /**
+     * @description : 获取分页列表
+     * ---------------------------------
+     * @author : leegoo
+     * @since : Create in 2018-11-18
+     */
+    @PostMapping(value = "/page")
+    public ResponseData<IPage<TbRecruit>> getTbRecruitList(@RequestBody TbRecruit param, @RequestParam(value = "draw", defaultValue = "0") Integer draw,
+                                                           @RequestParam(value = "length") Integer length,
+                                                           @RequestParam(value = "start") Integer start) {
+        log.info("getTbLabelList.draw:{}.length:{}.start:{}", draw, length, start);
+        Page<TbRecruit> page = new Page<>(draw, length);
+        IPage<TbRecruit> pageList = tbRecruitService.page(page, param);
+        return successData(pageList);
+    }
 
-/**
- * @description : 通过id获取TbRecruit
- * ---------------------------------
- * @author : leegoo
- * @since : Create in 2018-11-18
- */
-@GetMapping(value = "/getById")
-public ResponseData<TbRecruitVo> getTbRecruitById(String id) {
+    /**
+     * @description : 获取分页列表
+     * ---------------------------------
+     * @author : leegoo
+     * @since : Create in 2018-11-18
+     */
+    @PostMapping(value = "/pageByRecommend")
+    public ResponseData<IPage<TbRecruit>> pageByRecommend(@RequestBody TbRecruit param, @RequestParam(value = "draw", defaultValue = "0") Integer draw,
+                                                           @RequestParam(value = "length") Integer length,
+                                                           @RequestParam(value = "start") Integer start) {
+        log.info("getTbLabelList.draw:{}.length:{}.start:{}", draw, length, start);
+        Page<TbRecruit> page = new Page<>(draw, length);
+        IPage<TbRecruit> pageList = tbRecruitService.pageByRecommend(page, param);
+        return successData(pageList);
+    }
+
+    /**
+     * @description : 通过id获取TbRecruit
+     * ---------------------------------
+     * @author : leegoo
+     * @since : Create in 2018-11-18
+     */
+    @GetMapping(value = "/getById")
+    public ResponseData<TbRecruitVo> getTbRecruitById(String id) {
 /* JSONResult<TbRecruit> resJson = new JSONResult<>();
         try {
     TbRecruit param= tbRecruitService.selectById(id);
@@ -102,16 +107,16 @@ public ResponseData<TbRecruitVo> getTbRecruitById(String id) {
         }
         return resJson;*/
         return null;
-        }
+    }
 
-/**
- * @description : 通过id删除TbRecruit
- * ---------------------------------
- * @author : leegoo
- * @since : Create in 2018-11-18
- */
-@GetMapping(value = "/deleteById")
-public ResponseData<Boolean> deleteTbRecruitById(String id) {
+    /**
+     * @description : 通过id删除TbRecruit
+     * ---------------------------------
+     * @author : leegoo
+     * @since : Create in 2018-11-18
+     */
+    @GetMapping(value = "/deleteById")
+    public ResponseData<Boolean> deleteTbRecruitById(String id) {
         /*JSONResult<TbRecruit> resJson = new JSONResult<>();
         try{
         resJson.setSuccess(tbRecruitService.deleteById(id));
@@ -122,16 +127,16 @@ public ResponseData<Boolean> deleteTbRecruitById(String id) {
         }
         return resJson;*/
         return null;
-        }
+    }
 
-/**
- * @description : 通过id更新TbRecruit
- * ---------------------------------
- * @author : leegoo
- * @since : Create in 2018-11-18
- */
-@PostMapping(value = "/update")
-public ResponseData<Boolean> updateTbRecruitById(@RequestBody @Validated(value = UpdateValid.class) TbRecruit param) {
+    /**
+     * @description : 通过id更新TbRecruit
+     * ---------------------------------
+     * @author : leegoo
+     * @since : Create in 2018-11-18
+     */
+    @PostMapping(value = "/update")
+    public ResponseData<Boolean> updateTbRecruitById(@RequestBody @Validated(value = UpdateValid.class) TbRecruit param) {
 /*  JSONResult<TbRecruit> resJson = new JSONResult<>();
         try{
         resJson.setSuccess(tbRecruitService.updateById(param));
@@ -142,16 +147,16 @@ public ResponseData<Boolean> updateTbRecruitById(@RequestBody @Validated(value =
         }
         return resJson;*/
         return null;
-        }
+    }
 
-/**
- * @description : 添加TbRecruit
- * ---------------------------------
- * @author : leegoo
- * @since : Create in 2018-11-18
- */
-@PostMapping(value = "/add")
-public ResponseData<Boolean> addTbRecruit(@RequestBody @Validated(value = AddValid.class) TbRecruit param) {
+    /**
+     * @description : 添加TbRecruit
+     * ---------------------------------
+     * @author : leegoo
+     * @since : Create in 2018-11-18
+     */
+    @PostMapping(value = "/add")
+    public ResponseData<Boolean> addTbRecruit(@RequestBody @Validated(value = AddValid.class) TbRecruit param) {
 /*  JSONResult<TbRecruit> resJson = new JSONResult<>();
         try{
         resJson.setSuccess(tbRecruitService.insert(param));
@@ -162,5 +167,5 @@ public ResponseData<Boolean> addTbRecruit(@RequestBody @Validated(value = AddVal
         }
         return resJson;*/
         return null;
-        }
-        }
+    }
+}

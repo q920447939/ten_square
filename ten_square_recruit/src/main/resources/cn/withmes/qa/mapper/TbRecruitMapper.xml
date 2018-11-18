@@ -6,7 +6,7 @@
         <id column="id" property="id" />
         <result column="jobname" property="jobname" />
         <result column="salary" property="salary" />
-        <result column="condition" property="condition" />
+        <result column="conditions" property="conditions" />
         <result column="education" property="education" />
         <result column="type" property="type" />
         <result column="address" property="address" />
@@ -21,7 +21,7 @@
 
     <!-- 通用查询结果列 -->
     <sql id="Base_Column_List">
- 		id ,jobname ,salary ,condition ,education ,type ,address ,eid ,createtime ,state ,url ,label ,content1 ,content2		
+ 		id ,jobname ,salary ,conditions ,education ,type ,address ,eid ,createtime ,state ,url ,label ,content1 ,content2
     </sql>
 
 </mapper>
