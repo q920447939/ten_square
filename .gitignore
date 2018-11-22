@@ -1,9 +1,9 @@
 /target/
-
+/.idea/
 .classpath 
 .project 
 .settings 
-##filter databfile¡¢sln file## 
+##filter databfileï¿½ï¿½sln file## 
 *.mdb 
 *.ldb 
 *.sln class file
@@ -36,3 +36,12 @@ Icon?
 ehthumbs.db 
 Thumbs.db
 *.lst
+### Example user template template
+### Example user template
+
+# IntelliJ project files
+.idea
+*.iml
+out
+gen
+.gitignore

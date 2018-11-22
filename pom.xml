@@ -13,6 +13,7 @@
         <module>ten_square_base</module>
         <module>ten_square_recruit</module>
         <module>ten_square_qa</module>
+        <module>ten_square_artcle</module>
     </modules>
     <name>tensquare_parent</name>
     <description>十次方项目</description>

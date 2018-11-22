@@ -16,6 +16,7 @@ import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -79,7 +80,7 @@ public ResponseData<IPage<TbEnterprise>> getTbEnterpriseList(@RequestBody TbEnte
  * @since : Create in 2018-11-18
  */
 @GetMapping(value = "/getById")
-public ResponseData<TbEnterpriseVo> getTbEnterpriseById(String id) {
+public ResponseData<TbEnterpriseVo> getTbEnterpriseById( String id) {
         TbEnterprise dto = tbEnterpriseService.findById(id);
         return successData(CopyAttributesUtils.copyAtoB(dto,TbEnterpriseVo.class));
         }
@@ -91,17 +92,9 @@ public ResponseData<TbEnterpriseVo> getTbEnterpriseById(String id) {
  * @since : Create in 2018-11-18
  */
 @GetMapping(value = "/deleteById")
-public ResponseData<Boolean> deleteTbEnterpriseById(String id) {
-        /*JSONResult<TbEnterprise> resJson = new JSONResult<>();
-        try{
-        resJson.setSuccess(tbEnterpriseService.deleteById(id));
-        }catch (Exception e) {
-        resJson.setSuccess(false);
-        resJson.setMessage("异常信息:{"+e.getClass().getName()+"}");
-        logger.info("异常信息:{}"+e.getMessage());
-        }
-        return resJson;*/
-        return null;
+public ResponseData<Boolean> deleteTbEnterpriseById(@PathVariable(name = "id") String id) {
+        int delete = tbEnterpriseService.delete(id);
+        return successData(delete>0?true:false);
         }
 
 /**
@@ -121,8 +114,8 @@ public ResponseData<Boolean> updateTbEnterpriseById(@RequestBody @Validated(valu
         logger.info("异常信息:{}"+e.getMessage());
         }
         return resJson;*/
-        return null;
-        }
+        int code = tbEnterpriseService.update(param);
+        return successData(code>0?true:false);        }
 
 /**
  * @description : 添加TbEnterprise
@@ -141,6 +134,7 @@ public ResponseData<Boolean> addTbEnterprise(@RequestBody @Validated(value = Add
         logger.info("异常信息:{}"+e.getMessage());
         }
         return resJson;*/
-        return null;
+        int code = tbEnterpriseService.add(param);
+        return successData(code>0?true:false);
         }
         }

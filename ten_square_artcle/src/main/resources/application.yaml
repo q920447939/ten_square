@@ -1,8 +1,8 @@
 server:
-  port: 9001
+  port: 9005
 spring:
   application:
-    name: ten-square-base
+    name: ten-square-artcle
   cache:
     type: redis
     ehcache:
