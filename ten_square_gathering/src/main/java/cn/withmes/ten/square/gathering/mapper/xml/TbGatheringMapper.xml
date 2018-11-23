@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.withmes.ten.square.gathering.mapper.TbGatheringMapper">
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="cn.withmes.ten.square.gathering.entity.TbGathering">
+        <id column="id" property="id" />
+        <result column="name" property="name" />
+        <result column="summary" property="summary" />
+        <result column="detail" property="detail" />
+        <result column="sponsor" property="sponsor" />
+        <result column="image" property="image" />
+        <result column="starttime" property="starttime" />
+        <result column="endtime" property="endtime" />
+        <result column="address" property="address" />
+        <result column="enrolltime" property="enrolltime" />
+        <result column="state" property="state" />
+        <result column="city" property="city" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+ 		id ,name ,summary ,detail ,sponsor ,image ,starttime ,endtime ,address ,enrolltime ,state ,city		
+    </sql>
+
+</mapper>

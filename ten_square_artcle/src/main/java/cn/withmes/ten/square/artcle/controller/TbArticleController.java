@@ -28,29 +28,29 @@ import org.springframework.web.bind.annotation.RequestBody;
 
 
 /**
- *code is far away from bug with the animal protecting
- *  ┏┓　　　┏┓
- *┏┛┻━━━┛┻┓
- *┃　　　　　　　┃ 　
- *┃　　　━　　　┃
- *┃　┳┛　┗┳　┃
- *┃　　　　　　　┃
- *┃　　　┻　　　┃
- *┃　　　　　　　┃
- *┗━┓　　　┏━┛
- *　　┃　　　┃神兽保佑
- *　　┃　　　┃代码无BUG！
- *　　┃　　　┗━━━┓
- *　　┃　　　　　　　┣┓
- *　　┃　　　　　　　┏┛
- *　　┗┓┓┏━┳┓┏┛
- *　　　┃┫┫　┃┫┫
- *　　　┗┻┛　┗┻┛
+ * code is far away from bug with the animal protecting
+ * ┏┓　　　┏┓
+ * ┏┛┻━━━┛┻┓
+ * ┃　　　　　　　┃
+ * ┃　　　━　　　┃
+ * ┃　┳┛　┗┳　┃
+ * ┃　　　　　　　┃
+ * ┃　　　┻　　　┃
+ * ┃　　　　　　　┃
+ * ┗━┓　　　┏━┛
+ * 　　┃　　　┃神兽保佑
+ * 　　┃　　　┃代码无BUG！
+ * 　　┃　　　┗━━━┓
+ * 　　┃　　　　　　　┣┓
+ * 　　┃　　　　　　　┏┛
+ * 　　┗┓┓┏━┳┓┏┛
+ * 　　　┃┫┫　┃┫┫
+ * 　　　┗┻┛　┗┻┛
  *
- *   @description : TbArticleVo 控制器
- *   ---------------------------------
- *      @author leegoo
- *   @since 2018-11-21
+ * @author leegoo
+ * @description : TbArticleVo 控制器
+ * ---------------------------------
+ * @since 2018-11-21
  */
 @RestController
 @RequestMapping("/tb-article")
@@ -67,14 +67,14 @@ public class TbArticleController extends BaseRestfulController {
      */
     @PostMapping(value = "/page")
     public ResponseData<IPage<TbArticleListVo>> getTbArticleList(
-                @RequestBody TbArticleListVo param ,
-                @RequestParam(value = "draw",defaultValue = "0") Integer draw,
-                @RequestParam(value = "length") Integer length,
-                @RequestParam(value = "start") Integer start) {
-            log.info("getTbLabelList.draw:{}.length:{}.start:{}",draw,length,start);
-            Page<TbArticle> page = new Page<>(draw, length);
-            IPage<TbArticle> pageList = tbArticleService.page(page, param);
-             IPage<TbArticleListVo> iPage = CopyAttributesUtils.copyAtoB(pageList, IPage.class);
+            @RequestBody TbArticleListVo param,
+            @RequestParam(value = "draw", defaultValue = "0") Integer draw,
+            @RequestParam(value = "length") Integer length,
+            @RequestParam(value = "start") Integer start) {
+        log.info("getTbLabelList.draw:{}.length:{}.start:{}", draw, length, start);
+        Page<TbArticle> page = new Page<>(draw, length);
+        IPage<TbArticle> pageList = tbArticleService.page(page, param);
+        IPage<TbArticleListVo> iPage = CopyAttributesUtils.copyAtoB(pageList, IPage.class);
         return successData(iPage);
     }
 
@@ -87,7 +87,36 @@ public class TbArticleController extends BaseRestfulController {
     @GetMapping(value = "/get/{id}")
     public ResponseData<TbArticleVo> getTbArticleById(@PathVariable(name = "id") String id) {
         TbArticle dto = tbArticleService.findById(id);
-        return successData(CopyAttributesUtils.copyAtoB(dto,TbArticleVo.class));
+        return successData(CopyAttributesUtils.copyAtoB(dto, TbArticleVo.class));
+    }
+
+
+    /**
+     * @description : 通过id增加文章的点赞数
+     * ---------------------------------
+     * @author : leegoo
+     * @since : Create in 2018-11-21
+     */
+    @GetMapping(value = "/thumbup/{articleId}")
+    public ResponseData<Integer> thumbup(@PathVariable(name = "articleId") String articleId) {
+        TbArticle dto = tbArticleService.findById(articleId);
+        if (dto != null)
+            dto.setThumbup(dto.getThumbup()+1);
+        return successData(tbArticleService.update(dto));
+    }
+
+    /**
+     * @description : 通过id修改文章的审核状态
+     * ---------------------------------
+     * @author : leegoo
+     * @since : Create in 2018-11-21
+     */
+    @GetMapping(value = "/examine/{articleId}")
+    public ResponseData<Integer> auditTbArticleById(@PathVariable(name = "articleId") String articleId) {
+        TbArticle dto = tbArticleService.findById(articleId);
+        if (dto != null)
+            dto.setState("1");
+        return successData(tbArticleService.update(dto));
     }
 
     /**
@@ -98,8 +127,8 @@ public class TbArticleController extends BaseRestfulController {
      */
     @GetMapping(value = "/delete/{id}")
     public ResponseData<Integer> deleteTbArticleById(@PathVariable(name = "id") String id) {
-        log.info("deleteTbArticleById.id:{}",id);
-        return successData( tbArticleService.delete(id));
+        log.info("deleteTbArticleById.id:{}", id);
+        return successData(tbArticleService.delete(id));
     }
 
     /**
@@ -109,8 +138,8 @@ public class TbArticleController extends BaseRestfulController {
      * @since : Create in 2018-11-21
      */
     @PostMapping(value = "/update")
-    public ResponseData<Integer> updateTbArticleById(@RequestBody  @Validated(value = UpdateValid.class) TbArticleUpdateVo param) {
-        log.info("updateTbArticleById.param:{}",param);
+    public ResponseData<Integer> updateTbArticleById(@RequestBody @Validated(value = UpdateValid.class) TbArticleUpdateVo param) {
+        log.info("updateTbArticleById.param:{}", param);
         TbArticle e = CopyAttributesUtils.copyAtoB(param, TbArticle.class);
         return successData(tbArticleService.update(e));
     }
@@ -123,7 +152,7 @@ public class TbArticleController extends BaseRestfulController {
      */
     @PostMapping(value = "/add")
     public ResponseData<Integer> addTbArticle(@RequestBody @Validated(value = AddValid.class) TbArticleAddVo param) {
-        log.info("addTbArticle.param:{}",param);
+        log.info("addTbArticle.param:{}", param);
         TbArticle e = CopyAttributesUtils.copyAtoB(param, TbArticle.class);
         return successData(tbArticleService.add(e));
     }

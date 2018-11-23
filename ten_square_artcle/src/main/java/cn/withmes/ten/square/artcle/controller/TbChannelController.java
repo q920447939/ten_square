@@ -28,29 +28,29 @@ import org.springframework.web.bind.annotation.RequestBody;
 
 
 /**
- *code is far away from bug with the animal protecting
- *  ┏┓　　　┏┓
- *┏┛┻━━━┛┻┓
- *┃　　　　　　　┃ 　
- *┃　　　━　　　┃
- *┃　┳┛　┗┳　┃
- *┃　　　　　　　┃
- *┃　　　┻　　　┃
- *┃　　　　　　　┃
- *┗━┓　　　┏━┛
- *　　┃　　　┃神兽保佑
- *　　┃　　　┃代码无BUG！
- *　　┃　　　┗━━━┓
- *　　┃　　　　　　　┣┓
- *　　┃　　　　　　　┏┛
- *　　┗┓┓┏━┳┓┏┛
- *　　　┃┫┫　┃┫┫
- *　　　┗┻┛　┗┻┛
+ * code is far away from bug with the animal protecting
+ * ┏┓　　　┏┓
+ * ┏┛┻━━━┛┻┓
+ * ┃　　　　　　　┃
+ * ┃　　　━　　　┃
+ * ┃　┳┛　┗┳　┃
+ * ┃　　　　　　　┃
+ * ┃　　　┻　　　┃
+ * ┃　　　　　　　┃
+ * ┗━┓　　　┏━┛
+ * 　　┃　　　┃神兽保佑
+ * 　　┃　　　┃代码无BUG！
+ * 　　┃　　　┗━━━┓
+ * 　　┃　　　　　　　┣┓
+ * 　　┃　　　　　　　┏┛
+ * 　　┗┓┓┏━┳┓┏┛
+ * 　　　┃┫┫　┃┫┫
+ * 　　　┗┻┛　┗┻┛
  *
- *   @description : TbChannelVo 控制器
- *   ---------------------------------
- *      @author leegoo
- *   @since 2018-11-21
+ * @author leegoo
+ * @description : TbChannelVo 控制器
+ * ---------------------------------
+ * @since 2018-11-21
  */
 @RestController
 @RequestMapping("/tb-channel")
@@ -67,14 +67,15 @@ public class TbChannelController extends BaseRestfulController {
      */
     @PostMapping(value = "/page")
     public ResponseData<IPage<TbChannelListVo>> getTbChannelList(
-                @RequestBody TbChannelListVo param ,
-                @RequestParam(value = "draw",defaultValue = "0") Integer draw,
-                @RequestParam(value = "length") Integer length,
-                @RequestParam(value = "start") Integer start) {
-            log.info("getTbLabelList.draw:{}.length:{}.start:{}",draw,length,start);
-            Page<TbChannel> page = new Page<>(draw, length);
-            IPage<TbChannel> pageList = tbChannelService.page(page, param);
-            return successData(pageList);
+            @RequestBody TbChannelListVo param,
+            @RequestParam(value = "draw", defaultValue = "0") Integer draw,
+            @RequestParam(value = "length") Integer length,
+            @RequestParam(value = "start") Integer start) {
+        log.info("getTbLabelList.draw:{}.length:{}.start:{}", draw, length, start);
+        Page<TbChannel> page = new Page<>(draw, length);
+        IPage<TbChannel> pageList = tbChannelService.page(page, param);
+        IPage<TbChannelListVo> iPage = CopyAttributesUtils.copyAtoB(pageList, IPage.class);
+        return successData(iPage);
     }
 
     /**
@@ -86,7 +87,7 @@ public class TbChannelController extends BaseRestfulController {
     @GetMapping(value = "/get/{id}")
     public ResponseData<TbChannelVo> getTbChannelById(@PathVariable(name = "id") String id) {
         TbChannel dto = tbChannelService.findById(id);
-        return successData(CopyAttributesUtils.copyAtoB(dto,TbChannelVo.class));
+        return successData(CopyAttributesUtils.copyAtoB(dto, TbChannelVo.class));
     }
 
     /**
@@ -97,8 +98,8 @@ public class TbChannelController extends BaseRestfulController {
      */
     @GetMapping(value = "/delete/{id}")
     public ResponseData<Integer> deleteTbChannelById(@PathVariable(name = "id") String id) {
-        log.info("deleteTbChannelById.id:{}",id);
-        return successData( tbChannelService.delete(id));
+        log.info("deleteTbChannelById.id:{}", id);
+        return successData(tbChannelService.delete(id));
     }
 
     /**
@@ -108,8 +109,8 @@ public class TbChannelController extends BaseRestfulController {
      * @since : Create in 2018-11-21
      */
     @PostMapping(value = "/update")
-    public ResponseData<Integer> updateTbChannelById(@RequestBody  @Validated(value = UpdateValid.class) TbChannelUpdateVo param) {
-        log.info("updateTbChannelById.param:{}",param);
+    public ResponseData<Integer> updateTbChannelById(@RequestBody @Validated(value = UpdateValid.class) TbChannelUpdateVo param) {
+        log.info("updateTbChannelById.param:{}", param);
         TbChannel e = CopyAttributesUtils.copyAtoB(param, TbChannel.class);
 
         return successData(tbChannelService.update(e));
@@ -123,7 +124,7 @@ public class TbChannelController extends BaseRestfulController {
      */
     @PostMapping(value = "/add")
     public ResponseData<Integer> addTbChannel(@RequestBody @Validated(value = AddValid.class) TbChannelAddVo param) {
-        log.info("addTbChannel.param:{}",param);
+        log.info("addTbChannel.param:{}", param);
         TbChannel e = CopyAttributesUtils.copyAtoB(param, TbChannel.class);
         return successData(tbChannelService.add(e));
     }

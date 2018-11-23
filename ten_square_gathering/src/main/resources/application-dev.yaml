@@ -1,7 +1,7 @@
 spring:
   datasource:
     type: com.alibaba.druid.pool.DruidDataSource
-    url: jdbc:mysql://182.254.234.193:3308/tensquare_qa?useUnicode=true&characterEncoding=utf8&useSSL=false
+    url: jdbc:mysql://182.254.234.193:3308/tensquare_gathering?useUnicode=true&characterEncoding=utf8&useSSL=false
     username: root
     password: 123456
     initialSize: 5
@@ -22,7 +22,7 @@ spring:
     type: redis
     #redis
   redis:
-    host: 182.254.234.193.0.0.1
+    host: 182.254.234.193
     port: 6379
     database: 0
     jedis:
@@ -32,9 +32,9 @@ spring:
         min-idle: 0
 
 
-  # 扫描 cn.withmes.qa.mapper.xml
+  # 扫描 mapper.xml
 mybatis-plus:
-  mapper-locations: classpath:/cn.withmes.qa.mapper/*.xml
+  mapper-locations: classpath:/mapper/*.xml
   configuration:
     log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
 

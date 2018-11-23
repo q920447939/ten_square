@@ -22,7 +22,7 @@ spring:
     type: redis
     #redis
   redis:
-    host: 127.0.0.1
+    host: 182.254.234.193.0.0.1
     port: 6379
     database: 0
     jedis:
