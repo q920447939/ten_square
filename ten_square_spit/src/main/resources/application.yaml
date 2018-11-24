@@ -1,0 +1,22 @@
+server:
+  port: 9007
+spring:
+  application:
+    name: ten-square-spit
+  cache:
+    type: redis
+    ehcache:
+      config: classpath:ehcache.xml
+  profiles:
+    active: dev
+  data:
+      mongodb:
+        database: spit
+        host: 182.254.234.193
+
+
+# Logger Config
+logging:
+  level:
+    com.baomidou.mybatisplus.samples.deluxe: debug
+

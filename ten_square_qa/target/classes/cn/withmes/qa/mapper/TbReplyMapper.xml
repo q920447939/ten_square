@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.withmes.qa.mapper.TbReplyMapper">
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="cn.withmes.qa.entity.TbReply">
+        <id column="id" property="id" />
+        <result column="problemid" property="problemid" />
+        <result column="content" property="content" />
+        <result column="createtime" property="createtime" />
+        <result column="updatetime" property="updatetime" />
+        <result column="userid" property="userid" />
+        <result column="nickname" property="nickname" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+ 		id ,problemid ,content ,createtime ,updatetime ,userid ,nickname		
+    </sql>
+
+</mapper>

@@ -1,0 +1,19 @@
+server:
+  port: 9001
+spring:
+  application:
+    name: ten-square-base
+  cache:
+    type: redis
+    ehcache:
+      config: classpath:ehcache.xml
+spring:
+  profiles:
+    active: dev
+
+
+# Logger Config
+logging:
+  level:
+    com.baomidou.mybatisplus.samples.deluxe: debug
+
