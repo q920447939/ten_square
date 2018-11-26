@@ -7,6 +7,8 @@ package cn.withmes.ten.square.search.service;
 
 import cn.withmes.ten.square.search.entity.Article;
 
+import java.util.List;
+
 /**
  * ClassName: ArticleService
  * @Description:
@@ -16,4 +18,7 @@ import cn.withmes.ten.square.search.entity.Article;
 
 public interface ArticleService {
     void save (Article article);
+
+    List<Article> findArticleOrCommentLike(String key, int page, int size);
+
 }

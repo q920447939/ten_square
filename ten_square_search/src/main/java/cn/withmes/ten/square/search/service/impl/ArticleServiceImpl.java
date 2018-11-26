@@ -10,12 +10,17 @@ import cn.withmes.ten.square.search.dao.ArticleDao;
 import cn.withmes.ten.square.search.entity.Article;
 import cn.withmes.ten.square.search.service.ArticleService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
+
+import java.util.List;
 
 /**
  * ClassName: ArticleServiceImpl
- * @Description:
+ *
  * @author leegoo
+ * @Description:
  * @date 2018年11月25日
  */
 @Service
@@ -29,5 +34,11 @@ public class ArticleServiceImpl implements ArticleService {
     public void save(Article article) {
         article.setId(UuidUtils.generate());
         articleDao.save(article);
+    }
+
+    @Override
+    public List<Article> findArticleOrCommentLike(String key, int page, int size) {
+        Pageable pageable = PageRequest.of(page-1, size);
+        return articleDao.findByTitleOrCommentLike(key,key, pageable);
     }
 }
