@@ -2,7 +2,7 @@ package cn.withmes.common.utils;
 
 /**
  * DESC: 分布式主键生成器
- * @author liming
+ * @author leegoo
  * @DATE 2015年8月11日下午3:01:50
  * @version 0.1.0
  * 
@@ -17,7 +17,7 @@ public class UuidUtils {
 	/**
 	 * @Description: 生成ID
 	 * @return   
-	 * @author liming
+	 * @author leegoo
 	 * @date 2018年4月13日
 	 */
 	public static String generate() {

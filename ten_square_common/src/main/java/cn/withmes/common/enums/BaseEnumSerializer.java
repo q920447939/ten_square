@@ -11,7 +11,7 @@ import java.io.IOException;
  * @Description:枚举序列化
  * @param:
  * @return:
- * @auther: liming
+ * @auther: leegoo
  * @date: 2018/5/19 11:10
  */
 public class BaseEnumSerializer extends JsonSerializer<BaseEnum> {

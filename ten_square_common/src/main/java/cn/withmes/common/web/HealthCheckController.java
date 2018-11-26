@@ -1,6 +1,6 @@
 /** 
  *@Project: common-web
- *@Author: liming
+ *@Author: leegoo
  *@Date: 2017年1月7日 
  * 
  */    
@@ -17,7 +17,7 @@ import java.util.Map;
 /**
  * ClassName: HealthCheckController 
  * 服务监控检测页面
- * @author liming
+ * @author leegoo
  * @date 2017年1月7日
  *
  * =================================================================================================

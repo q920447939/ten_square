@@ -4,7 +4,7 @@ package cn.withmes.common.exception;
  * @Description:Manager层异常类
  * @param:
  * @return:
- * @auther: liming
+ * @auther: leegoo
  * @date: 2018/5/19 11:11
  */
 public class ControllerException extends Exception {

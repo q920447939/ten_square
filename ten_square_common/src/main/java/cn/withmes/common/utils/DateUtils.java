@@ -158,7 +158,7 @@ public class DateUtils extends org.apache.commons.lang3.time.DateUtils {
 	 * @param date
 	 * @param field
 	 * @return
-	 * @author liming
+	 * @author leegoo
 	 * @date 2018年5月10日
 	 */
 	public static Date getFirstDate(Date date, int field) {
@@ -198,7 +198,7 @@ public class DateUtils extends org.apache.commons.lang3.time.DateUtils {
 	 * @param date
 	 * @param field
 	 * @return
-	 * @author liming
+	 * @author leegoo
 	 * @date 2018年5月10日
 	 */
 	public static Date getLastDate(Date date, int field) {
@@ -330,7 +330,7 @@ public class DateUtils extends org.apache.commons.lang3.time.DateUtils {
 	 * @param smdate
 	 * @param bdate
 	 * @return
-	 * @author liming
+	 * @author leegoo
 	 * @date 2018年5月10日
 	 */
 	public static int daysBetween(Date smdate, Date bdate) {

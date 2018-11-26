@@ -1,6 +1,6 @@
 /**
  * @Project:
- * @Author: liming
+ * @Author: leegoo
  * @Date: 2018年11月09日
  */
 
@@ -16,7 +16,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 /**
  * ClassName: MyExceptionHandler
  *
- * @author liming
+ * @author leegoo
  * @Description: 自定义异常返回错误页面
  * @date 2018年11月09日
  */

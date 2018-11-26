@@ -19,7 +19,7 @@ import java.util.Set;
 /**
  * ClassName: BaseServiceImpl 
  * @Description: 业务实现层基类
- * @author liming
+ * @author leegoo
  * @param <T>
  * @date 2018年3月20日
  *
@@ -51,7 +51,7 @@ public abstract class BaseServiceImpl<T> {
 	/**
 	 * @Description: 获取实体对象
 	 * @return   
-	 * @author liming
+	 * @author leegoo
 	 * @date 2016年9月3日
 	 */
 	public abstract BaseMapper<T> getBaseMapper();
@@ -60,7 +60,7 @@ public abstract class BaseServiceImpl<T> {
 	 * @Description: 校验器
 	 * @param entity
 	 * @throws Exception   
-	 * @author liming
+	 * @author leegoo
 	 * @date 2018年3月20日
 	 */
 	public void validate(T entity) {

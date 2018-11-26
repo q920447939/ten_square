@@ -19,7 +19,7 @@ import java.util.Map;
 /**
  * 简单封装Jackson，实现JSON String<->Java Object的Mapper.
  * 封装不同的输出风格, 使用不同的builder函数创建实例.
- * @author liming
+ * @author leegoo
  */
 public class JsonMapper {
 

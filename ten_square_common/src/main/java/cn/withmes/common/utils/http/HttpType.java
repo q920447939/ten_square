@@ -3,7 +3,7 @@ package cn.withmes.common.utils.http;
 /**
  * ClassName: HttpType 
  * @Description: HTTP请求类型
- * @author liming
+ * @author leegoo
  * @date 2016年11月10日
  *
  * =================================================================================================

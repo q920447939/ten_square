@@ -8,7 +8,7 @@ package cn.withmes.common.utils;
  * 3.Commons-Lang的xml/html escape
  * 4.JDK提供的URLEncoder
  * 
- * @author liming
+ * @author leegoo
  */
 public class Encodes {
 /*

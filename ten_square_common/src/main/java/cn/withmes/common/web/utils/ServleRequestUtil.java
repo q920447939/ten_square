@@ -2,7 +2,7 @@ package cn.withmes.common.web.utils;
 
 /**
  * @desc Servlet请求工具类
- * @author liming
+ * @author leegoo
  * @date 2015年8月18日 下午6:13:43
  * 
  */

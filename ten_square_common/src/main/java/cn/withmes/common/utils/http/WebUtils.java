@@ -12,7 +12,7 @@ import java.nio.charset.Charset;
 
 /**
  * @Description: WEB Utils for request
-  * @author liming@haokukeji.com
+  * @author leegoo
   * @date 2018/5/3
   *
   * =================================================================================================

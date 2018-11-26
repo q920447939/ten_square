@@ -8,7 +8,7 @@ import java.io.InputStream;
 
 /**
  * @Description: FileItem.java
-  * @author liming@haokukeji.com
+  * @author leegoo
   * @date 2018/5/3
   *
   * =================================================================================================

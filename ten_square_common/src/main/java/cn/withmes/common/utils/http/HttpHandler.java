@@ -4,7 +4,7 @@ package cn.withmes.common.utils.http;
 /**
  * ClassName: HttpHandler 
  * @Description: HTTP请求处理类
- * @author liming
+ * @author leegoo
  * @date 2016年11月10日
  *
  * =================================================================================================
@@ -73,7 +73,7 @@ public class HttpHandler {
 	*//**
 	 * 请求处理
 	 * @return   
-	 * @author liming
+	 * @author leegoo
 	 * @date 2017年3月28日
 	 *//*
 	public String processRequest(){

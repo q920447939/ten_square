@@ -1,6 +1,6 @@
 /** 
  *@Project: common-common
- *@Author: liming
+ *@Author: leegoo
  *@Date: 2017年7月27日 
  * 
  */    
@@ -11,7 +11,7 @@ import org.slf4j.LoggerFactory;
 
 /**
  * ClassName: LoggerUtils 
- * @author liming
+ * @author leegoo
  * @date 2017年7月27日
  *
  * =================================================================================================

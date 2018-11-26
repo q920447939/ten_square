@@ -1,6 +1,6 @@
 /**
  * @Project: 配置错误页面
- * @Author: liming
+ * @Author: leegoo
  * @Date: 2018年11月09日
  */
 package cn.withmes.common.web.error;

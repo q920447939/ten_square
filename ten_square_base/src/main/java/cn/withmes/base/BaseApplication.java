@@ -1,6 +1,6 @@
 /**
  * @Project:
- * @Author: liming
+ * @Author: leegoo
  * @Date: 2018年11月15日
  */
 package cn.withmes.base;
@@ -13,7 +13,7 @@ import org.springframework.cache.annotation.EnableCaching;
 /**
  * ClassName: BaseApplication
  * @Description:
- * @author liming
+ * @author leegoo
  * @date 2018年11月15日
  */
 @SpringBootApplication

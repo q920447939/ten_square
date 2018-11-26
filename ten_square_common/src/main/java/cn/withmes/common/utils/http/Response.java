@@ -3,7 +3,7 @@ package cn.withmes.common.utils.http;
 /**
  * ClassName: Response 
  * @Description: http响应类
- * @author liming
+ * @author leegoo
  * @date 2016年11月10日
  *
  * =================================================================================================

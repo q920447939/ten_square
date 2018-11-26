@@ -1,6 +1,6 @@
 /** 
  *@Project: cool-common-web
- *@Author: liming
+ *@Author: leegoo
  *@Date: 2018年5月8日 
  *@Copyright: ©2018-2028 www.haokukeji.com Inc. All rights reserved. 
  */    
@@ -15,7 +15,7 @@ import javax.servlet.http.HttpServletResponse;
 /**
  * ClassName: RequestContextHolderUtils 
  * @Description: 请求上下文工具栏
- * @author liming
+ * @author leegoo
  * @date 2018年5月8日
  */
 

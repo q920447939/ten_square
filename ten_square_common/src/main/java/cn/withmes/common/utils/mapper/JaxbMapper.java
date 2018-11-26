@@ -12,7 +12,7 @@ package cn.withmes.common.utils.mapper;
  * 在创建时需要设定所有需要序列化的Root对象的Class.
  * 特别支持Root对象是Collection的情形.
  * 
- * @author liming
+ * @author leegoo
  */
 public class JaxbMapper {
 /*

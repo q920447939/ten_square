@@ -1,6 +1,6 @@
 /** 
  *@Project: common-common
- *@Author: liming
+ *@Author: leegoo
  *@Date: 2017年5月10日 
  * 
  */
@@ -24,7 +24,7 @@ import java.io.Serializable;
  *  *	}
  * @param:
  * @return:
- * @auther: liming
+ * @auther: leegoo
  * @date: 2018/5/19 11:12
  */
 public class ResponseData<T> implements Serializable {
@@ -95,7 +95,7 @@ public class ResponseData<T> implements Serializable {
 	 * @Description: ResponseData中Data对象转换
 	 * @param destinationClass
 	 * @return  
-	 * @author liming
+	 * @author leegoo
 	 * @date 2017年11月8日
 	 */
 /*	public <E> ResponseData<E> map(Class<E> destinationClass) {
@@ -109,7 +109,7 @@ public class ResponseData<T> implements Serializable {
 	/**
 	 * 判断是否成功
 	 * @return   
-	 * @author liming
+	 * @author leegoo
 	 * @date 2018年1月8日
 	 */
 	@JsonIgnore

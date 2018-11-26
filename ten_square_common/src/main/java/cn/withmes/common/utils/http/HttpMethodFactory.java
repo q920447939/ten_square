@@ -5,7 +5,7 @@ package cn.withmes.common.utils.http;
  * 
  * ClassName: HttpMethodFactory 
  * @Description: HTTP请求处理工厂
- * @author liming
+ * @author leegoo
  * @date 2016年11月10日
  *
  * =================================================================================================

@@ -8,7 +8,7 @@ import cn.withmes.common.enums.ResultEnum;
  * @Description:业务异常
  * @param:
  * @return:
- * @auther: liming
+ * @auther: leegoo
  * @date: 2018/5/19 11:11
  */
 @SuppressWarnings("serial")

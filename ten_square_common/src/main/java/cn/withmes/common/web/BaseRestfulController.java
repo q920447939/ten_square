@@ -29,7 +29,7 @@ import java.util.Map.Entry;
 /**
  * 基础Controller
  * ClassName: BaseGeneralController 
- * @author liming
+ * @author leegoo
  * @date 2017年3月22日
  */
 public abstract class BaseRestfulController {
@@ -41,7 +41,7 @@ public abstract class BaseRestfulController {
 	 * @param data 消息内容
 	 * @param result 消息code
 	 * @return   Map
-	 * @author liming
+	 * @author leegoo
 	 * @param <T>
 	 * @date 2017年3月22日
 	 */
@@ -52,7 +52,7 @@ public abstract class BaseRestfulController {
 	 * 返回成功结果数据封装
 	 * @param data 数据内容
 	 * @return
-	 * @author liming
+	 * @author leegoo
 	 * @param <T>
 	 * @date 2017年3月22日
 	 */
@@ -69,7 +69,7 @@ public abstract class BaseRestfulController {
 	 * 转换所有Url请求参数到Bean
 	 * @param request
 	 * @return 入参Bean
-	 * @author liming
+	 * @author leegoo
 	 */
 /*	public RequestParams convertParams(HttpServletRequest request){
 		Map<String, String[]> requestParameterMap = request.getParameterMap();
@@ -87,7 +87,7 @@ public abstract class BaseRestfulController {
      * @Description: 获取请求header公共参数
      * @param request
      * @return
-     * @author liming
+     * @author leegoo
      * @date 2018年4月24日
      */
     protected HeaderInfo getHeaderInfo(HttpServletRequest request) {

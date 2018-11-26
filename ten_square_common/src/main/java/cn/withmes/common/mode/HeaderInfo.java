@@ -1,6 +1,6 @@
 /** 
  *@Project: mall-trade-core 
- *@Author: liming
+ *@Author: leegoo
  *@Date: 2018年4月19日 
  *@Copyright: ©2014-2020 www.haokukeji.com Inc. All rights reserved. 
  */
@@ -12,7 +12,7 @@ import java.io.Serializable;
  * @Description:HeaderInfo
  * @param:
  * @return:
- * @auther: liming
+ * @auther: leegoo
  * @date: 2018/5/19 11:11
  */
 public class HeaderInfo implements Serializable {

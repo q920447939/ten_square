@@ -8,7 +8,7 @@ package cn.withmes.common.enums;
  * 	  <p>1200以上为业务错误
  * @param:
  * @return:
- * @auther: liming
+ * @auther: leegoo
  * @date: 2018/5/19 11:10
  */
 public enum ResultCode  implements ResultEnum<Integer>{

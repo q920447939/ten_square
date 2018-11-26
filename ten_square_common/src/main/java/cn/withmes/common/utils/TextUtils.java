@@ -9,7 +9,7 @@ import java.util.List;
 
 /**
  * @Description: 字符文本工具类
-  * @author liming@haokukeji.com
+  * @author leegoo
   * @date 2018/5/7
   *
   * =================================================================================================

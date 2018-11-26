@@ -4,7 +4,7 @@ package cn.withmes.common.enums;
  * @Description:是否启用
  * @param:
  * @return:
- * @auther: liming
+ * @auther: leegoo
  * @date: 2018/5/19 11:10
  */
 public enum Enabled implements BaseEnum<Enabled, Integer> {

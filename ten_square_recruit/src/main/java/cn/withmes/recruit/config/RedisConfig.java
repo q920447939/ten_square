@@ -1,6 +1,6 @@
 /**
  * @Project:
- * @Author: liming
+ * @Author: leegoo
  * @Date: 2018年11月16日
  */
 package cn.withmes.recruit.config;
@@ -8,7 +8,7 @@ package cn.withmes.recruit.config;
 /**
  * ClassName: RedisConfig
  * @Description:
- * @author liming
+ * @author leegoo
  * @date 2018年11月16日
  */
 

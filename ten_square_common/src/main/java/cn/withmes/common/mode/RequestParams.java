@@ -1,6 +1,6 @@
 /** 
  *@Project: common-web
- *@Author: liming
+ *@Author: leegoo
  *@Date: 2017年4月14日 
  * 
  */    
@@ -12,7 +12,7 @@ import java.io.Serializable;
  * @Description:通用参数bean
  * @param:
  * @return:
- * @auther: liming
+ * @auther: leegoo
  * @date: 2018/5/19 11:11
  */
 public class RequestParams implements Serializable{

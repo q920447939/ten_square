@@ -15,7 +15,7 @@ import java.net.InetAddress;
  *
  * Mapping parameters supported: separator.
  *
- * @author liming
+ * @author leegoo
  */
 public class UUIDHexGenerator {
 

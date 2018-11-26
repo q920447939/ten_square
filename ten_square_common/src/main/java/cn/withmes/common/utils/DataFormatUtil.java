@@ -5,7 +5,7 @@ import java.math.BigDecimal;
 /**
  * ClassName: DataFormatUtil 
  * @Description: 基本数据类型格式化工具
- * @author liming
+ * @author leegoo
  * @date 2016年12月23日
  */
 public class DataFormatUtil {
@@ -61,7 +61,7 @@ public class DataFormatUtil {
 	 * @Description: 格式化字符串
 	 * @param str
 	 * @return   
-	 * @author liming
+	 * @author leegoo
 	 * @date 2016年12月23日
 	 */
 	public static String format(String str){

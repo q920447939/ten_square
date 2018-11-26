@@ -9,7 +9,7 @@ import java.beans.PropertyEditorSupport;
 /**
  * 
  * @description 与spring mvc的@InitBinder结合 用于防止XSS攻击
- * @author liming
+ * @author leegoo
  * @date 2014年3月29日 下午4:24:51
  */
 public class StringEscapeEditor extends PropertyEditorSupport {

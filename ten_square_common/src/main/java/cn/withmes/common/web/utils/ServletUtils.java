@@ -3,14 +3,14 @@
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * 
- * $Id: ServletUtils.java 1493 2011-02-13 16:33:38Z limingxiu $
+ * $Id: ServletUtils.java 1493 2011-02-13 16:33:38Z leegooxiu $
  */
 package cn.withmes.common.web.utils;
 
 /**
  * Http与Servlet工具类.
  * 
- * @author liming
+ * @author leegoo
  */
 @SuppressWarnings("rawtypes")
 public abstract class ServletUtils {
