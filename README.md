@@ -30,6 +30,19 @@
 
 ​	**Elasticsearch 的默认账户为 elastic 默认密码为 changme**
 
+​	修改默认密码:
+
+```shell
+curl -XPUT -u elastic 'http://localhost:9200/_xpack/security/user/elastic/_password' -d '{
+  "password" : "yourpasswd"
+}'s
+curl -XPUT -u elastic 'http://localhost:9200/_xpack/security/user/kibana/_password' -d '{
+  "password" : "yourpasswd"
+}'
+```
+
+
+
 ​	 附docker安装以及常用命令:
 
    ```shell
@@ -52,4 +65,44 @@
    	退出，然后重新登录，以便让权限生效。
    ```
 
+ **但是并不能够通过java代码访问到配置的9300端口**
 
+一开始以为是集群没有设置名称以及以为服务器没有开放端口,其实都是有的 
+
+
+
+### Docker 安装RabbitMQ
+
+​	1.拉取镜像
+
+```shell
+docker pull rabbitmq:3-management
+
+```
+
+​	2.启动镜像（默认用户名密码）,默认guest 用户，密码也是 guest
+
+```shell
+docker run -d --hostname my-rabbit --name rabbit -e RABBITMQ_DEFAULT_USER=user -e RABBITMQ_DEFAULT_PASS=password  -p 5671:5671 -p 5672:5672 -p 4369:4369 -p 15671:15671 -p 15672:15672 rabbitmq:3-management
+```
+
+
+
+  	3,完成之后访问 [http://localhost:15672/]( http://localhost:15672/) (ps:不要使用代理,这样会访问不到.亲测)
+
+
+
+​	**spring boot配置RabbitMQ注意:**
+
+```yaml
+spring:
+  datasource:
+    rabbitmq:
+        host: your service ip host
+        username: user   #因为设置了账号和密码 所以这里需要设置账号和密码
+        password: password
+```
+
+
+
+#### 

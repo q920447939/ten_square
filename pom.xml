@@ -15,6 +15,7 @@
         <module>ten_square_qa</module>
         <module>ten_square_artcle</module>
         <module>ten_square_search</module>
+        <module>ten_square_user</module>
     </modules>
     <name>tensquare_parent</name>
     <description>十次方项目</description>

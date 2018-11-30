@@ -3,12 +3,12 @@
  * @Author: leegoo
  * @Date: 2018年11月25日
  */
-package cn.withmes.ten.square.search.service.impl;
+package cn.withmes.ten.square.user.service.impl;
 
 import cn.withmes.common.utils.UuidUtils;
-import cn.withmes.ten.square.search.dao.ArticleDao;
-import cn.withmes.ten.square.search.entity.Article;
-import cn.withmes.ten.square.search.service.ArticleService;
+import cn.withmes.ten.square.user.mapper.ArticleDao;
+import cn.withmes.ten.square.user.entity.Article;
+import cn.withmes.ten.square.user.service.ArticleService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;

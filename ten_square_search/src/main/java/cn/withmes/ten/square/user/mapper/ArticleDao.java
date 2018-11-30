@@ -3,9 +3,9 @@
  * @Author: leegoo
  * @Date: 2018年11月25日
  */
-package cn.withmes.ten.square.search.dao;
+package cn.withmes.ten.square.user.mapper;
 
-import cn.withmes.ten.square.search.entity.Article;
+import cn.withmes.ten.square.user.entity.Article;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.elasticsearch.repository.ElasticsearchRepository;
 

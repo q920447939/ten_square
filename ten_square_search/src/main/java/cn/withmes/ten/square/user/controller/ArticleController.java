@@ -3,12 +3,12 @@
  * @Author: leegoo
  * @Date: 2018年11月25日
  */
-package cn.withmes.ten.square.search.controller;
+package cn.withmes.ten.square.user.controller;
 
 import cn.withmes.common.mode.ResponseData;
 import cn.withmes.common.web.BaseRestfulController;
-import cn.withmes.ten.square.search.entity.Article;
-import cn.withmes.ten.square.search.service.ArticleService;
+import cn.withmes.ten.square.user.entity.Article;
+import cn.withmes.ten.square.user.service.ArticleService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;

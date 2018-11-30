@@ -43,7 +43,9 @@ public class ResponseData<T> implements Serializable {
 	public static <E> ResponseData<E> builder(ResultEnum<Integer> resultCode) {
 	    return new ResponseData<E>(resultCode);
 	}
-	
+
+
+
 	public static <E> ResponseData<E> builder(E data, ResultEnum<Integer> resultCode) {
 		return new ResponseData<E>(resultCode, data);
 	}
@@ -51,6 +53,11 @@ public class ResponseData<T> implements Serializable {
 	public static <E> ResponseData<E> builder(E data, ResultEnum<Integer> result,String message) {
 		return new ResponseData<E>(result.getCode(),message, data);
 	}
+
+	public static <E> ResponseData<E> successDate() {
+		return new ResponseData<E>();
+	}
+
 
 	/**
 	 * <p>Title: 构造方法1</p> 

@@ -133,7 +133,11 @@ public enum ResultCode  implements ResultEnum<Integer>{
 	DATA_NOT_EXIST(1023, "请求无数据"),
 
 
-	BASE_ERROR(4000, "查无数据");
+	BASE_ERROR(4000, "查无数据"),
+	MOBILE_CODE_NOT_EXISTS(4001, "手机验证码错误"),
+
+
+	CODE_EXISTS(0001, "验证码已发送");
 
    
 	private Integer code;

@@ -63,7 +63,11 @@ public abstract class BaseRestfulController {
     protected <T> ResponseData<T> successData() {
         return ResponseData.builder(null, ResultCode.SUCCESS);
     }
-	
+
+	protected <T> ResponseData<T> failParamData() {
+        return ResponseData.builder(null, ResultCode.MISSING_REQUIRED_ARGUMENTS);
+    }
+
 	
 	/**
 	 * 转换所有Url请求参数到Bean

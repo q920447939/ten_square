@@ -5,4 +5,5 @@ spring:
     name: ten-square-search
   data:
     elasticsearch:
-      cluster-nodes: 127.0.0.1:9300
+      cluster-nodes: 129.204.42.203:9300
+      cluster-name: docker-es

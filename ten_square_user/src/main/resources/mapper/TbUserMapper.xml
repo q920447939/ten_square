@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.withmes.ten.square.user.mapper.TbUserMapper">
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="cn.withmes.ten.square.user.entity.TbUser">
+        <id column="id" property="id" />
+        <result column="mobile" property="mobile" />
+        <result column="password" property="password" />
+        <result column="nickname" property="nickname" />
+        <result column="sex" property="sex" />
+        <result column="birthday" property="birthday" />
+        <result column="avatar" property="avatar" />
+        <result column="email" property="email" />
+        <result column="regdate" property="regdate" />
+        <result column="updatedate" property="updatedate" />
+        <result column="lastdate" property="lastdate" />
+        <result column="online" property="online" />
+        <result column="interest" property="interest" />
+        <result column="personality" property="personality" />
+        <result column="fanscount" property="fanscount" />
+        <result column="followcount" property="followcount" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+ 		id ,mobile ,password ,nickname ,sex ,birthday ,avatar ,email ,regdate ,updatedate ,lastdate ,online ,interest ,personality ,fanscount ,followcount		
+    </sql>
+
+</mapper>
