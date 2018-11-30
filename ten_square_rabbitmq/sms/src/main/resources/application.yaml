@@ -1,0 +1,7 @@
+server:
+  port: 9010
+spring:
+  rabbitmq:
+    host: 129.204.42.203
+    username: user
+    password: password
